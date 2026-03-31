@@ -1,0 +1,1389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hales Redden — Business Intelligence for Your Clients</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garant:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #1B2B4B;
+    --navy-light: #2A3F68;
+    --gold: #C4962A;
+    --gold-light: #E8B84B;
+    --cream: #FAF8F3;
+    --warm-white: #FFFFFF;
+    --muted: #6B7A94;
+    --border: #E2DDD5;
+    --text: #1A1A2E;
+    --text-light: #4A5568;
+    --green: #2D7A4F;
+    --green-bg: #EDF7F2;
+    --blue-bg: #EEF2FA;
+    --amber-bg: #FDF5E6;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--text);
+    line-height: 1.6;
+    font-size: 15px;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    background: var(--navy);
+    border-bottom: 2px solid var(--gold);
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 68px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .header-brand { display: flex; align-items: center; gap: 14px; }
+  .header-logo {
+    width: 38px; height: 38px;
+    background: var(--gold);
+    border-radius: 6px;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Cormorant Garant', serif;
+    font-size: 20px; font-weight: 700;
+    color: var(--navy);
+  }
+  .header-name {
+    font-family: 'Cormorant Garant', serif;
+    font-size: 20px; font-weight: 600;
+    color: #fff;
+    line-height: 1.1;
+  }
+  .header-sub {
+    font-size: 10px; font-weight: 400;
+    color: var(--gold-light);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .header-badge {
+    background: rgba(196,150,42,0.18);
+    border: 1px solid var(--gold);
+    color: var(--gold-light);
+    font-size: 10px; letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 3px 10px; border-radius: 20px;
+  }
+  .header-nav { display: flex; gap: 24px; }
+  .header-nav a {
+    color: rgba(255,255,255,0.7); text-decoration: none;
+    font-size: 13px; font-weight: 500;
+    transition: color 0.2s;
+  }
+  .header-nav a:hover { color: var(--gold-light); }
+  .header-cta {
+    background: var(--gold);
+    color: var(--navy);
+    padding: 8px 18px; border-radius: 6px;
+    font-weight: 600; font-size: 13px;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+  .header-cta:hover { background: var(--gold-light); }
+
+  /* ── HERO ── */
+  .hero {
+    background: var(--navy);
+    padding: 80px 60px 70px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 60% 40%, rgba(196,150,42,0.12) 0%, transparent 65%);
+    pointer-events: none;
+  }
+  .hero-eyebrow {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(196,150,42,0.15);
+    border: 1px solid rgba(196,150,42,0.3);
+    color: var(--gold-light);
+    padding: 5px 14px; border-radius: 20px;
+    font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
+    margin-bottom: 28px;
+  }
+  .hero h1 {
+    font-family: 'Cormorant Garant', serif;
+    font-size: clamp(36px, 5vw, 58px);
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.15;
+    margin-bottom: 20px;
+    max-width: 720px;
+    margin-left: auto; margin-right: auto;
+  }
+  .hero h1 em { color: var(--gold-light); font-style: italic; }
+  .hero-sub {
+    color: rgba(255,255,255,0.65);
+    font-size: 16px; font-weight: 300;
+    max-width: 560px;
+    margin: 0 auto 40px;
+    line-height: 1.7;
+  }
+  .hero-stats {
+    display: flex; justify-content: center; gap: 48px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 36px; margin-top: 40px;
+  }
+  .hero-stat-n {
+    font-family: 'Cormorant Garant', serif;
+    font-size: 36px; font-weight: 700;
+    color: var(--gold-light);
+    display: block; line-height: 1;
+  }
+  .hero-stat-l {
+    font-size: 11px; color: rgba(255,255,255,0.5);
+    text-transform: uppercase; letter-spacing: 0.08em;
+    margin-top: 6px; display: block;
+  }
+
+  /* ── SECTION WRAPPER ── */
+  .section { padding: 72px 60px; }
+  .section-alt { background: var(--warm-white); }
+  .section-dark { background: var(--navy); }
+  .section-inner { max-width: 1100px; margin: 0 auto; }
+
+  .section-label {
+    font-size: 11px; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 0.12em;
+    color: var(--gold);
+    margin-bottom: 10px;
+  }
+  .section-title {
+    font-family: 'Cormorant Garant', serif;
+    font-size: clamp(28px, 3.5vw, 40px);
+    font-weight: 700;
+    color: var(--navy);
+    line-height: 1.2;
+    margin-bottom: 14px;
+  }
+  .section-title.light { color: #fff; }
+  .section-body {
+    color: var(--text-light);
+    font-size: 15px; line-height: 1.75;
+    max-width: 600px;
+    margin-bottom: 48px;
+  }
+
+  /* ── HOW IT WORKS ── */
+  .how-steps {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px;
+    margin-top: 48px;
+  }
+  .how-step {
+    background: var(--cream);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 32px 28px;
+    position: relative;
+  }
+  .how-step-num {
+    position: absolute; top: -16px; left: 28px;
+    width: 32px; height: 32px;
+    background: var(--navy);
+    color: var(--gold-light);
+    border-radius: 50%;
+    font-family: 'Cormorant Garant', serif;
+    font-size: 18px; font-weight: 700;
+    display: flex; align-items: center; justify-content: center;
+    border: 2px solid var(--gold);
+  }
+  .how-face {
+    width: 72px; height: 72px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 32px; margin-bottom: 16px;
+    background: var(--blue-bg);
+    border: 2px solid var(--border);
+  }
+  .how-step h3 {
+    font-family: 'Cormorant Garant', serif;
+    font-size: 22px; font-weight: 700;
+    color: var(--navy); margin-bottom: 8px;
+  }
+  .how-step p { color: var(--text-light); font-size: 14px; line-height: 1.65; }
+  .how-connector {
+    display: none;
+  }
+
+  /* ── CALLOUT BOX ── */
+  .callout {
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin: 20px 0;
+    display: flex; gap: 14px; align-items: flex-start;
+  }
+  .callout-blue { background: var(--blue-bg); border-left: 3px solid #3B6FCC; }
+  .callout-green { background: var(--green-bg); border-left: 3px solid var(--green); }
+  .callout-amber { background: var(--amber-bg); border-left: 3px solid var(--gold); }
+  .callout-icon { font-size: 20px; flex-shrink: 0; margin-top: 2px; }
+  .callout h4 { font-size: 13px; font-weight: 600; color: var(--navy); margin-bottom: 4px; }
+  .callout p { font-size: 13px; color: var(--text-light); line-height: 1.6; }
+
+  /* ── PACKS GRID ── */
+  .packs-intro-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 40px;
+    margin-bottom: 48px;
+  }
+  .pack-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .pack-card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 28px 24px;
+    transition: box-shadow 0.2s, transform 0.2s;
+  }
+  .pack-card:hover {
+    box-shadow: 0 8px 24px rgba(27,43,75,0.1);
+    transform: translateY(-2px);
+  }
+  .pack-icon { font-size: 28px; margin-bottom: 14px; }
+  .pack-title {
+    font-family: 'Cormorant Garant', serif;
+    font-size: 20px; font-weight: 700;
+    color: var(--navy); margin-bottom: 6px;
+  }
+  .pack-price {
+    font-size: 13px; font-weight: 600;
+    color: var(--gold); margin-bottom: 12px;
+  }
+  .pack-desc { font-size: 13px; color: var(--text-light); line-height: 1.65; margin-bottom: 14px; }
+  .pack-features { list-style: none; }
+  .pack-features li {
+    font-size: 12px; color: var(--text-light);
+    padding: 4px 0; display: flex; align-items: center; gap: 6px;
+  }
+  .pack-features li::before { content: '✓'; color: var(--green); font-weight: 700; }
+
+  /* ── AGENTS ── */
+  .agents-intro { margin-bottom: 36px; }
+  .agents-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px;
+  }
+  .agent-card {
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 10px;
+    padding: 20px 18px;
+    transition: background 0.2s;
+  }
+  .agent-card:hover { background: rgba(255,255,255,0.11); }
+  .agent-card.lead {
+    background: rgba(196,150,42,0.12);
+    border-color: rgba(196,150,42,0.35);
+    grid-column: span 1;
+  }
+  .agent-avatar {
+    width: 48px; height: 48px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 22px;
+    margin-bottom: 12px;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.15);
+  }
+  .agent-name {
+    font-family: 'Cormorant Garant', serif;
+    font-size: 18px; font-weight: 700;
+    color: #fff; margin-bottom: 3px;
+  }
+  .agent-role { font-size: 11px; color: var(--gold-light); letter-spacing: 0.06em; margin-bottom: 8px; }
+  .agent-desc { font-size: 12px; color: rgba(255,255,255,0.6); line-height: 1.6; }
+  .agent-count {
+    display: inline-block;
+    margin-top: 8px;
+    font-size: 10px;
+    background: rgba(196,150,42,0.2);
+    color: var(--gold-light);
+    padding: 2px 8px; border-radius: 10px;
+  }
+  .agents-scale {
+    margin-top: 32px;
+    padding: 22px 24px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 10px;
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+    text-align: center;
+  }
+  .scale-n {
+    font-family: 'Cormorant Garant', serif;
+    font-size: 42px; font-weight: 700;
+    color: var(--gold-light); display: block; line-height: 1;
+  }
+  .scale-l { font-size: 12px; color: rgba(255,255,255,0.5); margin-top: 5px; }
+
+  /* ── PRICING ── */
+  .pricing-callout {
+    background: var(--blue-bg);
+    border: 1px solid #C8D8F0;
+    border-radius: 10px;
+    padding: 18px 24px;
+    margin-bottom: 32px;
+    display: flex; align-items: center; gap: 14px;
+  }
+  .pricing-tabs {
+    display: flex; gap: 0;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 32px;
+    width: fit-content;
+  }
+  .pricing-tab {
+    padding: 10px 24px; cursor: pointer;
+    font-size: 13px; font-weight: 500;
+    color: var(--text-light);
+    background: #fff;
+    border: none;
+    transition: all 0.2s;
+  }
+  .pricing-tab.active {
+    background: var(--navy);
+    color: #fff;
+  }
+
+  /* Revenue Calculator */
+  .calc-box {
+    background: var(--amber-bg);
+    border: 1px solid rgba(196,150,42,0.25);
+    border-radius: 12px;
+    padding: 28px 32px;
+    margin-bottom: 32px;
+  }
+  .calc-title {
+    font-family: 'Cormorant Garant', serif;
+    font-size: 22px; font-weight: 700;
+    color: var(--navy); margin-bottom: 20px;
+  }
+  .calc-row {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
+    margin-bottom: 20px;
+  }
+  .calc-label { font-size: 12px; font-weight: 600; color: var(--navy); margin-bottom: 6px; }
+  .calc-slider {
+    width: 100%; margin: 4px 0 2px;
+    -webkit-appearance: none; appearance: none;
+    height: 4px; background: var(--border);
+    border-radius: 4px; outline: none;
+  }
+  .calc-slider::-webkit-slider-thumb {
+    -webkit-appearance: none; appearance: none;
+    width: 18px; height: 18px;
+    background: var(--gold);
+    border-radius: 50%; cursor: pointer;
+  }
+  .calc-val { font-size: 13px; font-weight: 600; color: var(--gold); }
+  .calc-output {
+    background: var(--navy);
+    border-radius: 8px;
+    padding: 20px 24px;
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
+    text-align: center;
+  }
+  .calc-out-n {
+    font-family: 'Cormorant Garant', serif;
+    font-size: 30px; font-weight: 700;
+    color: var(--gold-light); display: block;
+  }
+  .calc-out-l { font-size: 11px; color: rgba(255,255,255,0.5); margin-top: 4px; }
+
+  /* Pricing cards */
+  .pricing-grid {
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;
+  }
+  .price-card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 28px 24px;
+    position: relative;
+  }
+  .price-card.popular {
+    border-color: var(--gold);
+    box-shadow: 0 0 0 2px rgba(196,150,42,0.15);
+  }
+  .popular-badge {
+    position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
+    background: var(--gold);
+    color: var(--navy);
+    font-size: 10px; font-weight: 700; letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 4px 14px; border-radius: 20px;
+  }
+  .price-who { font-size: 11px; font-weight: 600; color: var(--muted); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 6px; }
+  .price-name {
+    font-family: 'Cormorant Garant', serif;
+    font-size: 24px; font-weight: 700;
+    color: var(--navy); margin-bottom: 4px;
+  }
+  .price-tag {
+    margin: 16px 0;
+    display: flex; align-items: baseline; gap: 4px;
+  }
+  .price-currency { font-size: 18px; font-weight: 600; color: var(--navy); }
+  .price-amount {
+    font-family: 'Cormorant Garant', serif;
+    font-size: 48px; font-weight: 700;
+    color: var(--navy); line-height: 1;
+  }
+  .price-period { font-size: 13px; color: var(--muted); }
+  .price-desc { font-size: 13px; color: var(--text-light); margin-bottom: 20px; line-height: 1.6; }
+  .price-features { list-style: none; margin-bottom: 24px; }
+  .price-features li {
+    font-size: 13px; color: var(--text-light);
+    padding: 6px 0; border-bottom: 1px solid var(--border);
+    display: flex; align-items: center; gap: 8px;
+  }
+  .price-features li:last-child { border-bottom: none; }
+  .check { color: var(--green); font-weight: 700; }
+  .price-cta {
+    display: block; text-align: center;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: 600; font-size: 14px;
+    text-decoration: none;
+    transition: all 0.2s;
+    cursor: pointer;
+  }
+  .price-cta-primary { background: var(--navy); color: #fff; }
+  .price-cta-primary:hover { background: var(--navy-light); }
+  .price-cta-secondary { background: var(--cream); color: var(--navy); border: 1px solid var(--border); }
+  .price-cta-secondary:hover { background: var(--border); }
+
+  /* ── MAAT INTEGRATION ── */
+  .maat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: start; }
+  .maat-vis {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .maat-vis-header {
+    background: var(--navy);
+    padding: 14px 20px;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .maat-vis-dot { width: 8px; height: 8px; border-radius: 50%; }
+  .maat-vis-title { font-size: 12px; font-weight: 600; color: rgba(255,255,255,0.8); margin-left: 4px; }
+  .maat-vis-body { padding: 20px; }
+  .maat-stat-row { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-bottom: 16px; }
+  .maat-stat {
+    background: var(--cream);
+    border-radius: 8px; padding: 14px 16px;
+    border: 1px solid var(--border);
+  }
+  .maat-stat-n {
+    font-family: 'Cormorant Garant', serif;
+    font-size: 28px; font-weight: 700;
+    color: var(--navy); display: block; line-height: 1;
+  }
+  .maat-stat-l { font-size: 11px; color: var(--muted); margin-top: 4px; }
+  .maat-divider { border: none; border-top: 1px solid var(--border); margin: 16px 0; }
+  .maat-report-list { list-style: none; }
+  .maat-report-item {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 8px 0; border-bottom: 1px solid var(--border);
+    font-size: 12px;
+  }
+  .maat-report-item:last-child { border-bottom: none; }
+  .maat-report-name { color: var(--text); font-weight: 500; }
+  .maat-badge {
+    font-size: 10px; padding: 2px 8px; border-radius: 10px;
+    font-weight: 600;
+  }
+  .badge-live { background: var(--green-bg); color: var(--green); }
+  .badge-ready { background: var(--blue-bg); color: #3B6FCC; }
+  .badge-wave { background: var(--amber-bg); color: var(--gold); }
+
+  /* ── CONTACT ── */
+  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+  .contact-card {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 12px;
+    padding: 32px 28px;
+  }
+  .contact-icon { font-size: 32px; margin-bottom: 16px; }
+  .contact-title {
+    font-family: 'Cormorant Garant', serif;
+    font-size: 22px; font-weight: 700;
+    color: #fff; margin-bottom: 8px;
+  }
+  .contact-desc { font-size: 14px; color: rgba(255,255,255,0.6); margin-bottom: 20px; line-height: 1.6; }
+  .copy-email-box {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 8px;
+    padding: 10px 14px;
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 12px;
+  }
+  .copy-email-text { font-size: 13px; color: var(--gold-light); font-weight: 500; }
+  .copy-btn {
+    background: var(--gold);
+    color: var(--navy);
+    border: none; border-radius: 6px;
+    padding: 6px 12px; cursor: pointer;
+    font-size: 11px; font-weight: 700;
+    font-family: 'DM Sans', sans-serif;
+    transition: background 0.2s;
+  }
+  .copy-btn:hover { background: var(--gold-light); }
+  .phone-link {
+    display: flex; align-items: center; gap: 8px;
+    color: var(--gold-light);
+    text-decoration: none; font-size: 18px;
+    font-family: 'Cormorant Garant', serif; font-weight: 700;
+    margin-top: 12px;
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    background: #0F1A30;
+    padding: 28px 60px;
+    display: flex; align-items: center; justify-content: space-between;
+    border-top: 1px solid rgba(255,255,255,0.07);
+  }
+  .footer-left { font-size: 12px; color: rgba(255,255,255,0.35); }
+  .footer-right { font-size: 11px; color: rgba(255,255,255,0.25); }
+
+  /* ── MODAL ── */
+  .modal-overlay {
+    display: none; position: fixed; inset: 0;
+    background: rgba(0,0,0,0.6); z-index: 200;
+    align-items: center; justify-content: center;
+  }
+  .modal-overlay.open { display: flex; }
+  .modal {
+    background: #fff; border-radius: 14px;
+    padding: 36px 40px; max-width: 480px; width: 90%;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+  }
+  .modal h3 {
+    font-family: 'Cormorant Garant', serif;
+    font-size: 26px; font-weight: 700;
+    color: var(--navy); margin-bottom: 8px;
+  }
+  .modal p { font-size: 14px; color: var(--text-light); margin-bottom: 20px; }
+  .modal-form { display: flex; flex-direction: column; gap: 12px; }
+  .modal-form input, .modal-form select, .modal-form textarea {
+    padding: 10px 14px; border-radius: 7px;
+    border: 1px solid var(--border);
+    font-family: 'DM Sans', sans-serif; font-size: 14px;
+    outline: none;
+    transition: border 0.2s;
+  }
+  .modal-form input:focus, .modal-form select:focus, .modal-form textarea:focus {
+    border-color: var(--navy);
+  }
+  .modal-form textarea { min-height: 80px; resize: vertical; }
+  .modal-submit {
+    background: var(--navy); color: #fff;
+    border: none; border-radius: 8px;
+    padding: 12px; font-size: 14px; font-weight: 600;
+    cursor: pointer; font-family: 'DM Sans', sans-serif;
+    transition: background 0.2s;
+  }
+  .modal-submit:hover { background: var(--navy-light); }
+  .modal-close {
+    float: right; background: none; border: none;
+    font-size: 20px; cursor: pointer; color: var(--muted);
+    margin-top: -4px;
+  }
+  .modal-success {
+    text-align: center; padding: 24px 0;
+    display: none;
+  }
+  .modal-success-icon { font-size: 48px; margin-bottom: 12px; }
+
+  @media (max-width: 768px) {
+    .header { padding: 0 20px; }
+    .header-nav { display: none; }
+    .hero { padding: 48px 20px 40px; }
+    .section { padding: 48px 20px; }
+    .how-steps, .pack-cards, .agents-grid, .pricing-grid, .maat-grid, .contact-grid { grid-template-columns: 1fr; }
+    .calc-row { grid-template-columns: 1fr; }
+    .packs-intro-grid { grid-template-columns: 1fr; }
+    .hero-stats { flex-direction: column; gap: 24px; }
+    .footer { flex-direction: column; gap: 8px; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="header-brand">
+    <div class="header-logo">HR</div>
+    <div>
+      <div class="header-name">Hales Redden</div>
+      <div class="header-sub">Chartered Accountants · Est. 1950</div>
+    </div>
+  </div>
+  <nav class="header-nav">
+    <a href="#how-it-works">How It Works</a>
+    <a href="#packs">Client Packs</a>
+    <a href="#agents">Your AI Team</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <div style="display:flex;align-items:center;gap:12px">
+    <div class="header-badge">DEMO — T4H × Hales Redden</div>
+    <a href="#contact" class="header-cta" onclick="openModal('pilot')">Start Pilot →</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-eyebrow">
+    <span>⚡</span>
+    AI-Powered Business Intelligence — Exclusively for Your Clients
+  </div>
+  <h1>Give every SME client a<br><em>Virtual CFO</em> in their pocket.</h1>
+  <p class="hero-sub">
+    Hales Redden brings AI-powered financial intelligence to your entire client book — 
+    weekly briefings, cashflow alerts, KPI reporting. Delivered under your brand. 
+    Revenue comes back to you.
+  </p>
+  <div style="display:flex;justify-content:center;gap:14px;flex-wrap:wrap">
+    <a href="#how-it-works" class="header-cta" style="padding:12px 28px;font-size:15px">See How It Works</a>
+    <a href="#pricing" style="padding:12px 28px;font-size:15px;border:1px solid rgba(255,255,255,0.25);color:rgba(255,255,255,0.85);border-radius:6px;text-decoration:none;transition:all 0.2s">View Pricing</a>
+  </div>
+  <div class="hero-stats">
+    <div>
+      <span class="hero-stat-n">81</span>
+      <span class="hero-stat-l">Accounting-Specific AI Agents</span>
+    </div>
+    <div>
+      <span class="hero-stat-n">729</span>
+      <span class="hero-stat-l">Total Virtual Team Members</span>
+    </div>
+    <div>
+      <span class="hero-stat-n">8</span>
+      <span class="hero-stat-l">Client Intelligence Packs</span>
+    </div>
+    <div>
+      <span class="hero-stat-n">~$13k</span>
+      <span class="hero-stat-l">Monthly Margin — 100 Clients</span>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="section" id="how-it-works">
+  <div class="section-inner">
+    <div class="section-label">The Process</div>
+    <h2 class="section-title">Three steps. New revenue stream.</h2>
+    <p class="section-body">You bring the client relationship. We bring the intelligence platform. Your clients get world-class AI-powered insight — and you earn margin on every subscription.</p>
+
+    <div class="how-steps">
+      <div class="how-step">
+        <div class="how-step-num">1</div>
+        <div class="how-face">👩‍💼</div>
+        <h3>You Sign Up as Partner</h3>
+        <p>Hales Redden joins as a T4H Channel Partner. You get your own branded dashboard, access to all 8 intelligence packs, and a white-label portal. No setup costs. Free for your first 10 clients.</p>
+        <div class="callout callout-blue" style="margin-top:16px">
+          <span class="callout-icon">💡</span>
+          <div>
+            <h4>What this means for you</h4>
+            <p>You become the intelligent advisor — your clients see your brand, get your emails, and think of you when they think AI. Not another tech vendor.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="how-step">
+        <div class="how-step-num">2</div>
+        <div class="how-face">🏢</div>
+        <h3>Assign Packs to Clients</h3>
+        <p>You select which Intelligence Pack suits each client — FinanceOS for smaller clients, Cashflow Guard + Virtual CFO for growth-stage businesses. Send a link and they're live in minutes.</p>
+        <div class="callout callout-green" style="margin-top:16px">
+          <span class="callout-icon">✅</span>
+          <div>
+            <h4>Self-serve for clients</h4>
+            <p>Clients take the Pack Intake Quiz and self-qualify. No manual onboarding from you required. You just collect the margin.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="how-step">
+        <div class="how-step-num">3</div>
+        <div class="how-face">🤖</div>
+        <h3>AI Runs Weekly for Every Client</h3>
+        <p>Every Monday, your 81-strong AI accounting team runs briefings for every client. Cashflow reports, KPI summaries, ATO alerts. Delivered automatically. You look great without lifting a finger.</p>
+        <div class="callout callout-amber" style="margin-top:16px">
+          <span class="callout-icon">💰</span>
+          <div>
+            <h4>You earn the margin</h4>
+            <p>You set retail pricing, we charge you wholesale. The difference is your recurring monthly revenue. Tracked in your dashboard in real time.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CLIENT PACKS -->
+<section class="section section-alt" id="packs">
+  <div class="section-inner">
+    <div class="section-label">Client Offerings</div>
+    <h2 class="section-title">Intelligence Packs for Every Client</h2>
+    
+    <div class="packs-intro-grid">
+      <div>
+        <p class="section-body" style="margin-bottom:16px">These are the products your clients subscribe to — billed through you, powered by AI. Each pack replaces hours of manual advisory work with automated, AI-generated intelligence delivered weekly.</p>
+        <div class="callout callout-blue">
+          <span class="callout-icon">📦</span>
+          <div>
+            <h4>What is a "Pack"?</h4>
+            <p>A Pack is a recurring intelligence subscription for one SME client. It runs automatically each week — analysing their financial data, generating reports, and emailing insights directly to the client. You configure it once. It runs forever.</p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="callout callout-green">
+          <span class="callout-icon">📊</span>
+          <div>
+            <h4>Your margin on each pack</h4>
+            <p>You buy at wholesale and set your own retail price. A typical client paying $299/mo = ~$133 margin to you. 100 clients = $13,300/mo new recurring revenue from existing relationships.</p>
+          </div>
+        </div>
+        <div class="callout callout-amber" style="margin-top:14px">
+          <span class="callout-icon">🎯</span>
+          <div>
+            <h4>Designed for accountants</h4>
+            <p>Every pack generates outputs your clients already expect from you — BAS prep, cashflow summaries, KPI dashboards. The AI does the production work. You take the credit.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pack-cards">
+      <div class="pack-card">
+        <div class="pack-icon">📒</div>
+        <div class="pack-title">FinanceOS Essentials</div>
+        <div class="pack-price">From $99/mo per client</div>
+        <div class="pack-desc">The baseline every business needs. Auto-categorised transactions, BAS prep support, receipt extraction, and a monthly finance summary. Replaces 2–3 hours of manual bookkeeping work per month.</div>
+        <ul class="pack-features">
+          <li>Auto-categorisation of transactions</li>
+          <li>Receipt &amp; invoice extraction</li>
+          <li>BAS prep assistant</li>
+          <li>"Ask your numbers" AI assistant</li>
+          <li>Monthly finance summary</li>
+        </ul>
+      </div>
+
+      <div class="pack-card" style="border-color:var(--gold)">
+        <div class="pack-icon">💧</div>
+        <div class="pack-title">Cashflow Guard</div>
+        <div class="pack-price">Bundled from $199/mo</div>
+        <div class="pack-desc">Know before you're broke. 30/60/90 day runway views, invoice chasing priority lists, spend-risk alerts before they hit. Weekly cashflow email every Monday morning.</div>
+        <ul class="pack-features">
+          <li>30/60/90 day cash runway</li>
+          <li>Invoice chasing priority list</li>
+          <li>Spend-risk alerts</li>
+          <li>Weekly cashflow email</li>
+        </ul>
+      </div>
+
+      <div class="pack-card">
+        <div class="pack-icon">📈</div>
+        <div class="pack-title">Virtual CFO Intelligence</div>
+        <div class="pack-price">Bundled from $249/mo</div>
+        <div class="pack-desc">CFO-grade visibility without the salary bill. Weekly KPI summaries, margin analysis by product/service, pricing and profitability commentary, and a monthly board pack lite.</div>
+        <ul class="pack-features">
+          <li>Weekly KPI summary</li>
+          <li>Margin analysis by product/service</li>
+          <li>Pricing &amp; profitability commentary</li>
+          <li>Board pack lite (monthly)</li>
+        </ul>
+      </div>
+
+      <div class="pack-card">
+        <div class="pack-icon">🛡️</div>
+        <div class="pack-title">Compliance Ready</div>
+        <div class="pack-price">Add-on — from $79/mo</div>
+        <div class="pack-desc">ATO-safe always. Continuous compliance monitoring, deadline tracking, and automated alert emails so your clients never miss an obligation.</div>
+        <ul class="pack-features">
+          <li>ATO deadline tracker</li>
+          <li>PAYG &amp; super alerts</li>
+          <li>Continuous compliance monitoring</li>
+        </ul>
+      </div>
+
+      <div class="pack-card">
+        <div class="pack-icon">🚀</div>
+        <div class="pack-title">Growth Advisory AI</div>
+        <div class="pack-price">Add-on — from $99/mo</div>
+        <div class="pack-desc">Profitability signals and growth opportunities identified weekly. Benchmark comparisons, expansion readiness scores, and revenue optimisation suggestions based on actual financials.</div>
+        <ul class="pack-features">
+          <li>Profitability signal detection</li>
+          <li>Benchmark vs. industry</li>
+          <li>Revenue optimisation suggestions</li>
+        </ul>
+      </div>
+
+      <div class="pack-card" style="background:var(--navy);border-color:var(--navy)">
+        <div class="pack-icon">⭐</div>
+        <div class="pack-title" style="color:#fff">Complete Business OS</div>
+        <div class="pack-price" style="color:var(--gold-light)">From $499/mo all-in</div>
+        <div class="pack-desc" style="color:rgba(255,255,255,0.65)">Finance + Cashflow + CFO + Growth + Compliance. Replaces a part-time bookkeeper ($2k/mo), part-time CFO ($4k/mo), and admin overhead. Your client saves thousands.</div>
+        <ul class="pack-features">
+          <li style="color:rgba(255,255,255,0.7)">All 8 packs bundled</li>
+          <li style="color:rgba(255,255,255,0.7)">Quarterly business review</li>
+          <li style="color:rgba(255,255,255,0.7)">Dedicated advisory channel</li>
+          <li style="color:rgba(255,255,255,0.7)">Collections &amp; Admin AI</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AGENTS -->
+<section class="section section-dark" id="agents">
+  <div class="section-inner">
+    <div class="section-label" style="color:var(--gold-light)">Your AI Team</div>
+    <h2 class="section-title light">81 AI agents. <em style="color:var(--gold-light);font-style:italic">Led by Theo.</em></h2>
+    <p class="section-body" style="color:rgba(255,255,255,0.6);margin-bottom:36px">
+      WorkFamily AI has deployed a dedicated accounting intelligence team — 81 specialist agents under Theo, your Chief Financial Intelligence Officer. They're part of a 729-strong Neural Ennead deployed across the entire T4H platform. Every Monday, they work through your client book simultaneously.
+    </p>
+
+    <div class="callout" style="background:rgba(196,150,42,0.12);border-left:3px solid var(--gold);margin-bottom:36px">
+      <span class="callout-icon">🧠</span>
+      <div>
+        <h4 style="color:var(--gold-light)">What is the Neural Ennead?</h4>
+        <p style="color:rgba(255,255,255,0.65)">The Neural Ennead is a 9×9×9 autonomous agent architecture — 9 specialist families, each containing 9 teams of 9 agents = 729 total. It's not a chatbot. It's a structured organisation of AI workers with defined roles, accountability, and execution patterns. Theo's accounting family of 81 agents covers every aspect of financial intelligence your clients need.</p>
+      </div>
+    </div>
+
+    <div class="agents-grid">
+      <div class="agent-card lead">
+        <div class="agent-avatar" style="background:rgba(196,150,42,0.2);border-color:rgba(196,150,42,0.4);font-size:28px">🎯</div>
+        <div class="agent-name">Theo</div>
+        <div class="agent-role">Chief Financial Intelligence Officer · Lead Agent</div>
+        <div class="agent-desc">Orchestrates all 81 accounting agents. Reviews weekly briefing outputs before delivery. Routes anomalies to specialist sub-agents. Your clients' primary AI point of contact for financial matters.</div>
+        <span class="agent-count">Leads 81 agents · Accounting &amp; Finance Family</span>
+      </div>
+
+      <div class="agent-card">
+        <div class="agent-avatar">📊</div>
+        <div class="agent-name">Alex</div>
+        <div class="agent-role">Tax Intelligence Agent</div>
+        <div class="agent-desc">Monitors ATO obligations, identifies deduction opportunities, prepares BAS-ready summaries, and flags tax risk before it becomes a problem.</div>
+      </div>
+
+      <div class="agent-card">
+        <div class="agent-avatar">💧</div>
+        <div class="agent-name">Sam</div>
+        <div class="agent-role">Cashflow Monitor</div>
+        <div class="agent-desc">Runs 30/60/90 day runway models for every client. Raises alerts before cash pressure hits. Prioritises which invoices to chase first.</div>
+      </div>
+
+      <div class="agent-card">
+        <div class="agent-avatar">📋</div>
+        <div class="agent-name">Jordan</div>
+        <div class="agent-role">Compliance &amp; BAS Agent</div>
+        <div class="agent-desc">Tracks every compliance deadline across the client book. Generates BAS prep summaries. Sends deadline reminders automatically 4 weeks out.</div>
+      </div>
+
+      <div class="agent-card">
+        <div class="agent-avatar">💼</div>
+        <div class="agent-name">Priya</div>
+        <div class="agent-role">Payroll &amp; Super Intelligence</div>
+        <div class="agent-desc">Monitors payroll obligations, super guarantee deadlines, and STP submissions. Raises anomalies and flags underpayment risk before reporting cycles close.</div>
+      </div>
+
+      <div class="agent-card">
+        <div class="agent-avatar">📈</div>
+        <div class="agent-name">Morgan</div>
+        <div class="agent-role">P&amp;L Analyst</div>
+        <div class="agent-desc">Runs weekly margin analysis by product and service. Identifies declining profitability lines and surfaces pricing opportunities based on actual transaction data.</div>
+      </div>
+
+      <div class="agent-card">
+        <div class="agent-avatar">🔍</div>
+        <div class="agent-name">Riley</div>
+        <div class="agent-role">Audit Readiness Agent</div>
+        <div class="agent-desc">Continuously checks financial records for audit readiness. SHA-256 hashes key documents, identifies gaps, and prepares evidence packs on demand.</div>
+      </div>
+
+      <div class="agent-card">
+        <div class="agent-avatar">🎯</div>
+        <div class="agent-name">Quinn</div>
+        <div class="agent-role">KPI Dashboard Agent</div>
+        <div class="agent-desc">Populates client KPI dashboards weekly. Benchmark business performance against industry peers. Identifies leading indicators of financial stress or growth.</div>
+      </div>
+
+      <div class="agent-card">
+        <div class="agent-avatar">🚀</div>
+        <div class="agent-name">Drew</div>
+        <div class="agent-role">Growth Advisory Agent</div>
+        <div class="agent-desc">Identifies growth signals in client data — revenue acceleration, margin expansion opportunities, and pricing room — and packages them into advisory talking points for you.</div>
+      </div>
+    </div>
+
+    <div class="agents-scale">
+      <div>
+        <span class="scale-n">81</span>
+        <p class="scale-l">Accounting-specific agents<br>in Theo's team</p>
+      </div>
+      <div>
+        <span class="scale-n">729</span>
+        <p class="scale-l">Total Neural Ennead agents<br>across all T4H platforms</p>
+      </div>
+      <div>
+        <span class="scale-n">9×9×9</span>
+        <p class="scale-l">Hierarchical architecture —<br>9 families · 81 per family</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="section" id="pricing">
+  <div class="section-inner">
+    <div class="section-label">Partner Pricing</div>
+    <h2 class="section-title">Your revenue model. Your pricing.</h2>
+
+    <div class="pricing-callout">
+      <span style="font-size:22px">📐</span>
+      <div>
+        <strong style="font-size:13px;color:var(--navy)">How the margin model works:</strong>
+        <span style="font-size:13px;color:var(--text-light);margin-left:8px">You pay T4H wholesale rates. You set your own retail price for clients. The difference is your recurring margin — tracked in your dashboard monthly. Typical margin: ~$133/client/mo at standard pack pricing.</span>
+      </div>
+    </div>
+
+    <!-- REVENUE CALCULATOR -->
+    <div class="calc-box">
+      <div class="calc-title">💰 Revenue Calculator — Your Numbers</div>
+      <div class="calc-row">
+        <div>
+          <div class="calc-label">Number of clients on the platform</div>
+          <input type="range" class="calc-slider" id="slider-clients" min="5" max="500" value="100" step="5" oninput="calcUpdate()">
+          <div class="calc-val">Clients: <span id="val-clients">100</span></div>
+        </div>
+        <div>
+          <div class="calc-label">Average pack tier per client</div>
+          <input type="range" class="calc-slider" id="slider-tier" min="99" max="499" value="199" step="50" oninput="calcUpdate()">
+          <div class="calc-val">Pack price: $<span id="val-tier">199</span>/mo</div>
+        </div>
+      </div>
+      <div class="calc-row">
+        <div>
+          <div class="calc-label">Your markup above wholesale</div>
+          <input type="range" class="calc-slider" id="slider-markup" min="20" max="60" value="45" oninput="calcUpdate()">
+          <div class="calc-val">Margin: <span id="val-markup">45</span>%</div>
+        </div>
+        <div>
+          <div class="calc-label">Platform fee (Growth Partner)</div>
+          <div style="padding:10px 0;font-size:18px;font-weight:700;color:var(--navy);font-family:'Cormorant Garant',serif">$299/mo</div>
+          <div style="font-size:11px;color:var(--muted)">Fixed — all 8 packs included</div>
+        </div>
+      </div>
+      <div class="calc-output">
+        <div>
+          <span class="calc-out-n" id="out-monthly">$0</span>
+          <div class="calc-out-l">Monthly gross margin</div>
+        </div>
+        <div>
+          <span class="calc-out-n" id="out-annual">$0</span>
+          <div class="calc-out-l">Annual new revenue</div>
+        </div>
+        <div>
+          <span class="calc-out-n" id="out-per">$0</span>
+          <div class="calc-out-l">Margin per client</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PRICING CARDS — 2 COLUMNS (no T4H column) -->
+    <div style="margin-bottom:20px">
+      <div class="pricing-tabs" id="pricing-view">
+        <button class="pricing-tab active" onclick="switchPricingView('accountant')">For Hales Redden</button>
+        <button class="pricing-tab" onclick="switchPricingView('client')">For Your Clients</button>
+      </div>
+    </div>
+
+    <div id="accountant-pricing">
+      <div class="pricing-grid">
+        <div class="price-card">
+          <div class="price-who">Accountant Plan</div>
+          <div class="price-name">Partner Starter</div>
+          <div class="price-tag">
+            <span class="price-currency">$</span>
+            <span class="price-amount">0</span>
+            <span class="price-period">· 45-day pilot · up to 10 clients</span>
+          </div>
+          <div class="price-desc">Prove the model before you commit. 10 clients, 3 packs, 45 days. No lock-in, no setup cost.</div>
+          <ul class="price-features">
+            <li><span class="check">✓</span> Branded partner dashboard</li>
+            <li><span class="check">✓</span> 10 client workspaces — send link, they're live</li>
+            <li><span class="check">✓</span> FinanceOS, Cashflow Guard, Virtual CFO</li>
+            <li><span class="check">✓</span> Pack intake quiz — text to any client</li>
+            <li><span class="check">✓</span> Weekly AI briefing emails to each client</li>
+            <li><span style="color:var(--muted)">—</span> White-label domain</li>
+            <li><span style="color:var(--muted)">—</span> Billing &amp; invoicing automation</li>
+          </ul>
+          <div style="background:var(--green-bg);border-radius:8px;padding:14px;margin-bottom:16px;font-size:13px;color:var(--green)">
+            <strong>Your pilot economics:</strong> ~$1,330/mo gross margin from 10 clients · $15,960/yr
+          </div>
+          <button class="price-cta price-cta-secondary" onclick="openModal('pilot')">Start free pilot →</button>
+        </div>
+
+        <div class="price-card popular">
+          <div class="popular-badge">★ Recommended</div>
+          <div class="price-who">Accountant Plan</div>
+          <div class="price-name">Growth Partner</div>
+          <div class="price-tag">
+            <span class="price-currency">$</span>
+            <span class="price-amount">299</span>
+            <span class="price-period">/mo + wholesale pack costs</span>
+          </div>
+          <div class="price-desc">Roll across your full client roster. All 8 packs. White-label your brand. Real recurring revenue.</div>
+          <ul class="price-features">
+            <li><span class="check">✓</span> All 8 packs — assign any to any client</li>
+            <li><span class="check">✓</span> White-label: "Hales Redden Business Intelligence"</li>
+            <li><span class="check">✓</span> Custom domain: halesredden.bihub.com.au</li>
+            <li><span class="check">✓</span> Automated client onboarding — link-based</li>
+            <li><span class="check">✓</span> Weekly AI reports delivered to every client</li>
+            <li><span class="check">✓</span> Margin dashboard — see exactly what you earn</li>
+            <li><span class="check">✓</span> 10% wholesale discount (Growth Partner tier)</li>
+          </ul>
+          <div style="background:var(--amber-bg);border-radius:8px;padding:14px;margin-bottom:16px;font-size:13px;color:#8B6914">
+            <strong>100-client economics:</strong> ~$13,300/mo gross margin · $159,600/yr new revenue stream
+          </div>
+          <button class="price-cta price-cta-primary" onclick="openModal('partner')">Become a partner →</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="client-pricing" style="display:none">
+      <div class="pricing-grid">
+        <div class="price-card">
+          <div class="price-who">SME Client Plan</div>
+          <div class="price-name">Finance Essentials</div>
+          <div class="price-tag">
+            <span class="price-currency">$</span>
+            <span class="price-amount">99</span>
+            <span class="price-period">/mo · billed by your accountant</span>
+          </div>
+          <div class="price-desc">The baseline every business needs. Replaces 2–3 hours of manual bookkeeping per month. Your accountant configures it once — it runs automatically from there.</div>
+          <ul class="price-features">
+            <li><span class="check">✓</span> Auto-categorisation of transactions</li>
+            <li><span class="check">✓</span> Receipt &amp; invoice extraction</li>
+            <li><span class="check">✓</span> Monthly finance summary</li>
+            <li><span class="check">✓</span> BAS prep assistant</li>
+            <li><span class="check">✓</span> "Ask your numbers" AI assistant</li>
+            <li><span style="color:var(--muted)">—</span> Cashflow signals &amp; runway</li>
+            <li><span style="color:var(--muted)">—</span> CFO reporting &amp; KPIs</li>
+          </ul>
+          <button class="price-cta price-cta-secondary" onclick="openModal('client')">Talk to your accountant →</button>
+        </div>
+
+        <div class="price-card popular">
+          <div class="popular-badge">★ Most popular</div>
+          <div class="price-who">SME Client Plan</div>
+          <div class="price-name">Business Intelligence</div>
+          <div class="price-tag">
+            <span class="price-currency">$</span>
+            <span class="price-amount">299</span>
+            <span class="price-period">–$448/mo · Cashflow + CFO</span>
+          </div>
+          <div class="price-desc">Know you're not going broke. Get CFO-grade visibility without the salary bill. Cashflow Guard + Virtual CFO bundled — save 10% vs individual packs.</div>
+          <ul class="price-features">
+            <li><span class="check">✓</span> 30/60/90 day cash runway view</li>
+            <li><span class="check">✓</span> Invoice chasing priority list</li>
+            <li><span class="check">✓</span> Spend-risk alerts before they hit</li>
+            <li><span class="check">✓</span> Weekly cashflow email every Monday</li>
+            <li><span class="check">✓</span> Weekly KPI summary</li>
+            <li><span class="check">✓</span> Margin analysis by service/product</li>
+            <li><span class="check">✓</span> Board pack lite (monthly)</li>
+          </ul>
+          <button class="price-cta price-cta-primary" onclick="openModal('client')">Talk to your accountant →</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- MAAT INTEGRATION -->
+<section class="section section-alt" id="system">
+  <div class="section-inner">
+    <div class="section-label">Your Intelligence Layer</div>
+    <h2 class="section-title">Already running inside T4H.</h2>
+    <p class="section-body">The T4H MAAT (Measurement, Accountability, Auditing, Trust) system is the financial intelligence engine behind every pack. It's not being built — it's already live, with 3,450+ transactions, 250 registered sources, and 85 ready-to-generate reports.</p>
+
+    <div class="maat-grid">
+      <div>
+        <div class="callout callout-blue" style="margin-bottom:18px">
+          <span class="callout-icon">🏗️</span>
+          <div>
+            <h4>What is MAAT?</h4>
+            <p>MAAT is the financial data layer that powers every Intelligence Pack. It aggregates transactions across all accounts, categorises them automatically, and feeds structured financial intelligence to the AI agents for report generation. Your clients' data flows through MAAT — and out as weekly briefings.</p>
+          </div>
+        </div>
+        <div class="callout callout-green" style="margin-bottom:18px">
+          <span class="callout-icon">🔗</span>
+          <div>
+            <h4>Already integrated for Hales Redden</h4>
+            <p>Your firm is already onboarded in the MAAT system. Andrew Douglas has access to the accountant portal. The data model for your client book is pre-wired — adding clients is link-and-go.</p>
+          </div>
+        </div>
+        <div class="callout callout-amber">
+          <span class="callout-icon">📤</span>
+          <div>
+            <h4>Open Banking Ready</h4>
+            <p>MAAT supports BASIQ open banking integration — clients can connect their ANZ, CBA, Amex, and Bendigo accounts directly for real-time transaction feeds. No manual CSV uploads.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="maat-vis">
+        <div class="maat-vis-header">
+          <div class="maat-vis-dot" style="background:#FF5F57"></div>
+          <div class="maat-vis-dot" style="background:#FFBB2C"></div>
+          <div class="maat-vis-dot" style="background:#28C840"></div>
+          <span class="maat-vis-title">MAAT Intelligence Console — Hales Redden View</span>
+        </div>
+        <div class="maat-vis-body">
+          <div class="maat-stat-row">
+            <div class="maat-stat">
+              <span class="maat-stat-n">3,450</span>
+              <div class="maat-stat-l">Transactions processed</div>
+            </div>
+            <div class="maat-stat">
+              <span class="maat-stat-n">250</span>
+              <div class="maat-stat-l">Registered data sources</div>
+            </div>
+            <div class="maat-stat">
+              <span class="maat-stat-n">85</span>
+              <div class="maat-stat-l">Report templates ready</div>
+            </div>
+            <div class="maat-stat">
+              <span class="maat-stat-n">121</span>
+              <div class="maat-stat-l">Reports in accountant portal</div>
+            </div>
+          </div>
+          <hr class="maat-divider">
+          <div style="font-size:11px;font-weight:600;color:var(--muted);margin-bottom:10px;letter-spacing:0.06em;text-transform:uppercase">Available Reports</div>
+          <ul class="maat-report-list">
+            <li class="maat-report-item">
+              <span class="maat-report-name">BAS Quarterly Summary</span>
+              <span class="maat-badge badge-live">LIVE</span>
+            </li>
+            <li class="maat-report-item">
+              <span class="maat-report-name">P&amp;L Master View</span>
+              <span class="maat-badge badge-live">LIVE</span>
+            </li>
+            <li class="maat-report-item">
+              <span class="maat-report-name">Invoice Register (40 invoices)</span>
+              <span class="maat-badge badge-live">LIVE</span>
+            </li>
+            <li class="maat-report-item">
+              <span class="maat-report-name">RDTI Evidence Pack</span>
+              <span class="maat-badge badge-live">LIVE</span>
+            </li>
+            <li class="maat-report-item">
+              <span class="maat-report-name">SHA256 Transaction Audit</span>
+              <span class="maat-badge badge-live">LIVE</span>
+            </li>
+            <li class="maat-report-item">
+              <span class="maat-report-name">Cashflow 90-Day Runway</span>
+              <span class="maat-badge badge-ready">READY</span>
+            </li>
+            <li class="maat-report-item">
+              <span class="maat-report-name">Client KPI Dashboard</span>
+              <span class="maat-badge badge-ready">READY</span>
+            </li>
+            <li class="maat-report-item">
+              <span class="maat-report-name">Open Banking Feed (BASIQ)</span>
+              <span class="maat-badge badge-wave">Q2 2026</span>
+            </li>
+          </ul>
+          <div style="margin-top:16px;padding:12px;background:var(--navy);border-radius:8px;text-align:center">
+            <div style="font-size:11px;color:rgba(255,255,255,0.5);margin-bottom:6px">Accountant Portal</div>
+            <div style="font-size:12px;color:var(--gold-light);font-weight:600">mcp-command-centre.vercel.app/accountant</div>
+            <div style="font-size:10px;color:rgba(255,255,255,0.35);margin-top:4px">Andrew Douglas access · Token exp. Sep 2026</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section section-dark" id="contact">
+  <div class="section-inner">
+    <div class="section-label" style="color:var(--gold-light)">Get Started</div>
+    <h2 class="section-title light">Ready to run the pilot?</h2>
+    <p style="color:rgba(255,255,255,0.6);font-size:15px;max-width:560px;margin-bottom:40px;line-height:1.7">
+      The free pilot is 10 clients, 45 days, zero cost. Hales Redden is already registered in the platform. This is a conversation about turning that on.
+    </p>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <div class="contact-icon">💬</div>
+        <div class="contact-title">Talk to Troy at T4H</div>
+        <div class="contact-desc">Troy Latter is the founder of Tech 4 Humanity and the architect of this platform. He's the right person to talk to about onboarding Hales Redden as a launch partner.</div>
+        <div class="copy-email-box">
+          <span class="copy-email-text">troy@tech4humanity.com.au</span>
+          <button class="copy-btn" onclick="copyEmail('troy@tech4humanity.com.au', this)">Copy</button>
+        </div>
+        <div style="margin-top:12px">
+          <button onclick="openModal('pilot')" class="header-cta" style="border:none;padding:10px 20px;cursor:pointer;font-size:13px">Start Pilot Conversation →</button>
+        </div>
+      </div>
+
+      <div class="contact-card">
+        <div class="contact-icon">🏢</div>
+        <div class="contact-title">Hales Redden Office</div>
+        <div class="contact-desc">Gordon McKirdy and Andrew Douglas are the Hales Redden contacts already registered in the MAAT system. Existing clients can reach your firm directly.</div>
+        <div class="copy-email-box">
+          <span class="copy-email-text">gordon@halesredden.com.au</span>
+          <button class="copy-btn" onclick="copyEmail('gordon@halesredden.com.au', this)">Copy</button>
+        </div>
+        <a class="phone-link" href="tel:0285773100">
+          📞 (02) 8577 3100
+        </a>
+        <div style="font-size:12px;color:rgba(255,255,255,0.4);margin-top:8px">24 Bay Street, Rockdale NSW 2216</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-left">
+    © 2026 Tech 4 Humanity Pty Ltd (ABN 70 666 271 272) · Powered by WorkFamily AI · 729-Agent Neural Ennead
+  </div>
+  <div class="footer-right">
+    Demo prepared for Hales Redden &amp; Partners · Chartered Accountants · Rockdale NSW · Est. 1950 · Confidential
+  </div>
+</footer>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modal-overlay" onclick="closeModalOutside(event)">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <h3 id="modal-title">Start Pilot</h3>
+    <p id="modal-desc">Leave your details and Troy will reach out within one business day.</p>
+    <div class="modal-form" id="modal-form-inner">
+      <input type="text" placeholder="Your name" id="f-name">
+      <input type="email" placeholder="Your email" id="f-email">
+      <input type="text" placeholder="Firm / company name" id="f-firm">
+      <select id="f-interest">
+        <option value="">I'm interested in...</option>
+        <option value="pilot">Free 45-day pilot (10 clients)</option>
+        <option value="partner">Growth Partner onboarding</option>
+        <option value="demo">See a live demo first</option>
+        <option value="client">I'm an SME — talk to my accountant</option>
+      </select>
+      <textarea placeholder="Any specific questions or context..." id="f-notes"></textarea>
+      <button class="modal-submit" onclick="submitModal()">Send to Troy →</button>
+    </div>
+    <div class="modal-success" id="modal-success">
+      <div class="modal-success-icon">✅</div>
+      <h3 style="margin-bottom:8px">Done — Troy will be in touch.</h3>
+      <p>Expect a reply within one business day at troy@tech4humanity.com.au</p>
+    </div>
+  </div>
+</div>
+
+<script>
+// Pricing view toggle
+function switchPricingView(view) {
+  document.getElementById('accountant-pricing').style.display = view === 'accountant' ? 'block' : 'none';
+  document.getElementById('client-pricing').style.display = view === 'client' ? 'block' : 'none';
+  document.querySelectorAll('.pricing-tab').forEach((t, i) => {
+    t.classList.toggle('active', (i === 0 && view === 'accountant') || (i === 1 && view === 'client'));
+  });
+}
+
+// Revenue calculator
+function calcUpdate() {
+  const clients = parseInt(document.getElementById('slider-clients').value);
+  const tier = parseInt(document.getElementById('slider-tier').value);
+  const markup = parseInt(document.getElementById('slider-markup').value);
+  
+  document.getElementById('val-clients').textContent = clients;
+  document.getElementById('val-tier').textContent = tier;
+  document.getElementById('val-markup').textContent = markup;
+  
+  const perClient = tier * (markup / 100);
+  const monthly = Math.round(clients * perClient - 299);
+  const annual = monthly * 12;
+  
+  document.getElementById('out-monthly').textContent = '$' + monthly.toLocaleString();
+  document.getElementById('out-annual').textContent = '$' + annual.toLocaleString();
+  document.getElementById('out-per').textContent = '$' + Math.round(perClient).toLocaleString();
+}
+calcUpdate();
+
+// Modal
+function openModal(type) {
+  const titles = {
+    pilot: ['Start Free Pilot', 'Leave your details and Troy will reach out within one business day to kick off the 45-day pilot.'],
+    partner: ['Become a Growth Partner', 'Ready to roll across your full client book? Tell us a bit about your firm and client numbers.'],
+    client: ['Talk to Your Accountant', 'Fill in your details and Hales Redden will be in touch to configure the right pack for your business.']
+  };
+  document.getElementById('modal-title').textContent = titles[type]?.[0] || 'Get in Touch';
+  document.getElementById('modal-desc').textContent = titles[type]?.[1] || '';
+  document.getElementById('modal-success').style.display = 'none';
+  document.getElementById('modal-form-inner').style.display = 'flex';
+  document.getElementById('modal-overlay').classList.add('open');
+}
+function closeModal() { document.getElementById('modal-overlay').classList.remove('open'); }
+function closeModalOutside(e) { if (e.target === document.getElementById('modal-overlay')) closeModal(); }
+
+function submitModal() {
+  const name = document.getElementById('f-name').value.trim();
+  const email = document.getElementById('f-email').value.trim();
+  if (!name || !email) { alert('Please enter your name and email.'); return; }
+  
+  // Build mailto with form data
+  const subject = encodeURIComponent('Hales Redden Demo — ' + (document.getElementById('f-interest').value || 'Enquiry'));
+  const body = encodeURIComponent(
+    'Name: ' + name + '\n' +
+    'Email: ' + email + '\n' +
+    'Firm: ' + document.getElementById('f-firm').value + '\n' +
+    'Interest: ' + document.getElementById('f-interest').value + '\n' +
+    'Notes: ' + document.getElementById('f-notes').value
+  );
+  
+  // Show success, then open email client as backup
+  document.getElementById('modal-form-inner').style.display = 'none';
+  document.getElementById('modal-success').style.display = 'block';
+  
+  setTimeout(() => {
+    window.location.href = 'mailto:troy@tech4humanity.com.au?subject=' + subject + '&body=' + body;
+  }, 800);
+}
+
+// Copy email
+function copyEmail(email, btn) {
+  navigator.clipboard.writeText(email).then(() => {
+    btn.textContent = 'Copied!';
+    btn.style.background = 'var(--green)';
+    btn.style.color = '#fff';
+    setTimeout(() => { btn.textContent = 'Copy'; btn.style.background = ''; btn.style.color = ''; }, 2000);
+  });
+}
+</script>
+</body>
+</html>
