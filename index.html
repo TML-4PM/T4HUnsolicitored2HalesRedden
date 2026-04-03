@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Hales Redden — Business Intelligence for Your Clients</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garant:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Instrument+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
     --navy: #1B2B4B;
@@ -27,7 +27,7 @@
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
   body {
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Instrument Sans', sans-serif;
     background: var(--cream);
     color: var(--text);
     line-height: 1.6;
@@ -53,12 +53,12 @@
     background: var(--gold);
     border-radius: 6px;
     display: flex; align-items: center; justify-content: center;
-    font-family: 'Cormorant Garant', serif;
+    font-family: 'Playfair Display', serif;
     font-size: 20px; font-weight: 700;
     color: var(--navy);
   }
   .header-name {
-    font-family: 'Cormorant Garant', serif;
+    font-family: 'Playfair Display', serif;
     font-size: 20px; font-weight: 600;
     color: #fff;
     line-height: 1.1;
@@ -119,7 +119,7 @@
     margin-bottom: 28px;
   }
   .hero h1 {
-    font-family: 'Cormorant Garant', serif;
+    font-family: 'Playfair Display', serif;
     font-size: clamp(36px, 5vw, 58px);
     font-weight: 700;
     color: #fff;
@@ -142,7 +142,7 @@
     padding-top: 36px; margin-top: 40px;
   }
   .hero-stat-n {
-    font-family: 'Cormorant Garant', serif;
+    font-family: 'Playfair Display', serif;
     font-size: 36px; font-weight: 700;
     color: var(--gold-light);
     display: block; line-height: 1;
@@ -166,7 +166,7 @@
     margin-bottom: 10px;
   }
   .section-title {
-    font-family: 'Cormorant Garant', serif;
+    font-family: 'Playfair Display', serif;
     font-size: clamp(28px, 3.5vw, 40px);
     font-weight: 700;
     color: var(--navy);
@@ -190,30 +190,35 @@
     background: var(--cream);
     border: 1px solid var(--border);
     border-radius: 12px;
-    padding: 32px 28px;
+    padding: 0 28px 28px 28px;
     position: relative;
+    overflow: hidden;
   }
   .how-step-num {
-    position: absolute; top: -16px; left: 28px;
+    position: absolute; top: 12px; left: 16px;
     width: 32px; height: 32px;
     background: var(--navy);
     color: var(--gold-light);
     border-radius: 50%;
-    font-family: 'Cormorant Garant', serif;
+    font-family: 'Playfair Display', serif;
     font-size: 18px; font-weight: 700;
     display: flex; align-items: center; justify-content: center;
     border: 2px solid var(--gold);
+    z-index: 2;
   }
   .how-face {
-    width: 72px; height: 72px;
-    border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 32px; margin-bottom: 16px;
-    background: var(--blue-bg);
-    border: 2px solid var(--border);
+    width: calc(100% + 56px);
+    height: 160px;
+    margin: 0 -28px 20px -28px;
+    overflow: hidden;
+  }
+  .how-face img {
+    width: 100%; height: 100%;
+    object-fit: cover; object-position: center 20%;
+    display: block;
   }
   .how-step h3 {
-    font-family: 'Cormorant Garant', serif;
+    font-family: 'Playfair Display', serif;
     font-size: 22px; font-weight: 700;
     color: var(--navy); margin-bottom: 8px;
   }
@@ -255,7 +260,7 @@
   }
   .pack-icon { font-size: 28px; margin-bottom: 14px; }
   .pack-title {
-    font-family: 'Cormorant Garant', serif;
+    font-family: 'Playfair Display', serif;
     font-size: 20px; font-weight: 700;
     color: var(--navy); margin-bottom: 6px;
   }
@@ -290,16 +295,20 @@
     grid-column: span 1;
   }
   .agent-avatar {
-    width: 48px; height: 48px;
+    width: 72px; height: 72px;
     border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 22px;
-    margin-bottom: 12px;
-    background: rgba(255,255,255,0.1);
-    border: 1px solid rgba(255,255,255,0.15);
+    overflow: hidden;
+    margin-bottom: 14px;
+    border: 2px solid rgba(255,255,255,0.25);
+    flex-shrink: 0;
+  }
+  .agent-avatar img {
+    width: 100%; height: 100%;
+    object-fit: cover; object-position: center 15%;
+    display: block;
   }
   .agent-name {
-    font-family: 'Cormorant Garant', serif;
+    font-family: 'Playfair Display', serif;
     font-size: 18px; font-weight: 700;
     color: #fff; margin-bottom: 3px;
   }
@@ -323,7 +332,7 @@
     text-align: center;
   }
   .scale-n {
-    font-family: 'Cormorant Garant', serif;
+    font-family: 'Playfair Display', serif;
     font-size: 42px; font-weight: 700;
     color: var(--gold-light); display: block; line-height: 1;
   }
@@ -368,7 +377,7 @@
     margin-bottom: 32px;
   }
   .calc-title {
-    font-family: 'Cormorant Garant', serif;
+    font-family: 'Playfair Display', serif;
     font-size: 22px; font-weight: 700;
     color: var(--navy); margin-bottom: 20px;
   }
@@ -398,7 +407,7 @@
     text-align: center;
   }
   .calc-out-n {
-    font-family: 'Cormorant Garant', serif;
+    font-family: 'Playfair Display', serif;
     font-size: 30px; font-weight: 700;
     color: var(--gold-light); display: block;
   }
@@ -429,7 +438,7 @@
   }
   .price-who { font-size: 11px; font-weight: 600; color: var(--muted); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 6px; }
   .price-name {
-    font-family: 'Cormorant Garant', serif;
+    font-family: 'Playfair Display', serif;
     font-size: 24px; font-weight: 700;
     color: var(--navy); margin-bottom: 4px;
   }
@@ -439,7 +448,7 @@
   }
   .price-currency { font-size: 18px; font-weight: 600; color: var(--navy); }
   .price-amount {
-    font-family: 'Cormorant Garant', serif;
+    font-family: 'Playfair Display', serif;
     font-size: 48px; font-weight: 700;
     color: var(--navy); line-height: 1;
   }
@@ -467,7 +476,22 @@
   .price-cta-secondary { background: var(--cream); color: var(--navy); border: 1px solid var(--border); }
   .price-cta-secondary:hover { background: var(--border); }
 
-  /* ── MAAT INTEGRATION ── */
+  .portal-tab {
+    display: flex; align-items: center; gap: 12px;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 12px 18px;
+    text-decoration: none;
+    transition: box-shadow 0.2s, border-color 0.2s;
+    flex: 1; min-width: 200px;
+  }
+  .portal-tab:hover {
+    box-shadow: 0 4px 16px rgba(27,43,75,0.1);
+    border-color: var(--gold);
+  }
+
+  /* ── FACTOR · GATEWAY · MRI ── */
   .maat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: start; }
   .maat-vis {
     background: #fff;
@@ -490,7 +514,7 @@
     border: 1px solid var(--border);
   }
   .maat-stat-n {
-    font-family: 'Cormorant Garant', serif;
+    font-family: 'Playfair Display', serif;
     font-size: 28px; font-weight: 700;
     color: var(--navy); display: block; line-height: 1;
   }
@@ -512,6 +536,134 @@
   .badge-ready { background: var(--blue-bg); color: #3B6FCC; }
   .badge-wave { background: var(--amber-bg); color: var(--gold); }
 
+
+
+  /* ── REPORTING TAB ── */
+  .rpt-kpi {
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 10px; padding: 16px;
+    text-align: center;
+  }
+  .rpt-kpi-alert { border-color: rgba(220,38,38,0.3); background: rgba(220,38,38,0.08); }
+  .rpt-kpi-n { display:block; font-family:'Playfair Display',serif; font-size:24px; font-weight:700; color:#fff; }
+  .rpt-kpi-l { display:block; font-size:10px; color:rgba(255,255,255,0.4); margin-top:4px; }
+  .rpt-tab {
+    background: none; border: none; border-bottom: 2px solid transparent;
+    color: rgba(255,255,255,0.5); font-family: 'Instrument Sans', sans-serif;
+    font-size: 13px; font-weight: 500; padding: 10px 20px; cursor: pointer;
+    transition: all 0.2s;
+  }
+  .rpt-tab:hover { color: rgba(255,255,255,0.85); }
+  .rpt-tab.active { color: var(--gold-light); border-bottom-color: var(--gold); }
+  .rpt-panel { animation: fadeIn 0.2s ease; }
+  @keyframes fadeIn { from { opacity:0; transform:translateY(4px); } to { opacity:1; transform:none; } }
+  .rpt-table-wrap { border-radius: 10px; overflow: hidden; border: 1px solid rgba(255,255,255,0.1); }
+  .rpt-table { width:100%; border-collapse:collapse; font-size:13px; }
+  .rpt-table thead tr { background: rgba(255,255,255,0.05); }
+  .rpt-table th { padding:10px 14px; text-align:left; font-size:10px; font-weight:600; text-transform:uppercase; letter-spacing:0.06em; color:rgba(255,255,255,0.4); border-bottom:1px solid rgba(255,255,255,0.08); }
+  .rpt-table td { padding:10px 14px; border-bottom:1px solid rgba(255,255,255,0.06); color:rgba(255,255,255,0.75); }
+  .rpt-table tr:last-child td { border-bottom:none; }
+  .rpt-table tr:hover td { background:rgba(255,255,255,0.03); }
+  .rpt-td-name { color:#fff; font-weight:500; }
+  .rpt-td-muted { color:rgba(255,255,255,0.4); font-size:12px; }
+  .rpt-runway { font-weight:600; }
+  .rpt-green { color:#34d399; }
+  .rpt-amber { color:#FCD34D; }
+  .rpt-red { color:#FCA5A5; }
+  .rpt-badge { display:inline-block; padding:2px 8px; border-radius:4px; font-size:10px; font-weight:700; letter-spacing:0.04em; text-transform:uppercase; }
+  .rpt-badge-ok { background:rgba(45,122,79,0.25); color:#34d399; }
+  .rpt-badge-risk { background:rgba(220,38,38,0.2); color:#FCA5A5; }
+  .rpt-badge-warn { background:rgba(245,158,11,0.2); color:#FCD34D; }
+  .rpt-badge-muted { background:rgba(255,255,255,0.08); color:rgba(255,255,255,0.4); }
+  .rpt-score { font-size:11px; font-weight:700; padding:2px 8px; border-radius:4px; }
+  .rpt-score-low { background:rgba(45,122,79,0.2); color:#34d399; }
+  .rpt-score-med { background:rgba(245,158,11,0.2); color:#FCD34D; }
+  .rpt-score-high { background:rgba(220,38,38,0.2); color:#FCA5A5; }
+  .rpt-insight { background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.08); border-radius:10px; padding:14px; display:flex; gap:10px; }
+  .rpt-insight-icon { font-size:20px; flex-shrink:0; }
+  .rpt-insight-title { font-size:12px; font-weight:600; color:#fff; margin-bottom:4px; }
+  .rpt-insight-body { font-size:12px; color:rgba(255,255,255,0.55); line-height:1.55; }
+  .rpt-act-stat { background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.1); border-radius:10px; padding:20px; text-align:center; display:flex; flex-direction:column; }
+
+  /* ── CUSTOMER CARDS ── */
+  .cust-card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 24px;
+    display: flex; flex-direction: column; gap: 12px;
+    transition: box-shadow 0.2s;
+  }
+  .cust-card:hover { box-shadow: 0 8px 28px rgba(27,43,75,0.1); }
+  .cust-card-partner { border-color: var(--gold); background: rgba(196,150,42,0.03); }
+  .cust-card-risk { border-color: rgba(220,38,38,0.3); background: rgba(220,38,38,0.02); }
+  .cust-card-top { display:flex; align-items:center; justify-content:space-between; }
+  .cust-avatar-lg {
+    width: 52px; height: 52px; border-radius: 12px;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 700; font-size: 16px;
+  }
+  .cust-status-pill { font-size:9px; font-weight:700; letter-spacing:0.08em; padding:4px 10px; border-radius:20px; }
+  .cust-status-partner { background:rgba(196,150,42,0.15); color:var(--gold); }
+  .cust-status-live { background:var(--green-bg); color:var(--green); }
+  .cust-status-risk { background:rgba(220,38,38,0.1); color:#DC2626; }
+  .cust-status-watch { background:rgba(245,158,11,0.15); color:#D97706; }
+  .cust-name { font-family:'Playfair Display',serif; font-size:18px; font-weight:700; color:var(--navy); }
+  .cust-industry { font-size:12px; color:var(--muted); }
+  .cust-stats-row { display:grid; grid-template-columns:repeat(3,1fr); gap:8px; background:var(--cream); border-radius:8px; padding:12px; }
+  .cust-stat-n { display:block; font-family:'Playfair Display',serif; font-size:18px; font-weight:700; color:var(--navy); }
+  .cust-stat-l { font-size:10px; color:var(--muted); }
+  .cust-features { display:flex; flex-direction:column; gap:5px; }
+  .cust-feature { font-size:12px; color:var(--text-light); display:flex; gap:6px; }
+  .cust-check { color:var(--green); font-weight:700; flex-shrink:0; }
+  .cust-packs { display:flex; gap:6px; flex-wrap:wrap; }
+  .cust-pack { font-size:10px; font-weight:600; color:var(--muted); background:var(--cream); border:1px solid var(--border); padding:3px 8px; border-radius:6px; }
+  .cust-btn { font-size:12px; font-weight:600; padding:8px 14px; border-radius:7px; text-decoration:none; transition:all 0.2s; }
+  .cust-btn-primary { background:var(--navy); color:#fff; }
+  .cust-btn-primary:hover { background:var(--navy-light); }
+  .cust-btn-secondary { background:var(--cream); color:var(--navy); border:1px solid var(--border); }
+  .cust-btn-risk { background:rgba(220,38,38,0.1); color:#DC2626; border:1px solid rgba(220,38,38,0.2); }
+
+  /* ── DEMO CLIENT CARDS ── */
+  .demo-client-card {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    transition: background 0.2s;
+  }
+  .demo-client-card:hover { background: rgba(255,255,255,0.09); }
+  .demo-client-header { display:flex; align-items:center; gap:12px; }
+  .demo-client-avatar {
+    width: 40px; height: 40px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 700; font-size: 13px; flex-shrink: 0;
+  }
+  .demo-client-name { font-family:'Playfair Display',serif; font-size:15px; font-weight:700; color:#fff; line-height:1.2; }
+  .demo-client-industry { font-size:11px; color:rgba(255,255,255,0.45); margin-top:2px; }
+  .demo-status { margin-left:auto; font-size:9px; font-weight:700; letter-spacing:0.08em; padding:3px 8px; border-radius:10px; white-space:nowrap; flex-shrink:0; }
+  .demo-status-live { background:rgba(45,122,79,0.25); color:#5eead4; }
+  .demo-status-ready { background:rgba(59,111,204,0.2); color:#93c5fd; }
+  .demo-client-packs { display:flex; gap:6px; flex-wrap:wrap; }
+  .demo-pack { font-size:10px; font-weight:600; color:rgba(255,255,255,0.6); background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.12); padding:3px 8px; border-radius:6px; }
+  .demo-client-metrics { display:grid; grid-template-columns:1fr 1fr; gap:8px; }
+  .demo-metric-n { display:block; font-family:'Playfair Display',serif; font-size:20px; font-weight:700; color:#fff; }
+  .demo-metric-l { font-size:10px; color:rgba(255,255,255,0.4); }
+  .demo-client-features { display:flex; flex-direction:column; gap:4px; }
+  .demo-feature { font-size:12px; color:rgba(255,255,255,0.6); }
+  .demo-client-link {
+    display:block; text-align:center;
+    background:rgba(196,150,42,0.15); border:1px solid rgba(196,150,42,0.3);
+    color:var(--gold-light); font-size:12px; font-weight:600;
+    padding:8px 12px; border-radius:7px; text-decoration:none;
+    transition:background 0.2s;
+  }
+  .demo-client-link:hover { background:rgba(196,150,42,0.25); }
+
   /* ── CONTACT ── */
   .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
   .contact-card {
@@ -522,7 +674,7 @@
   }
   .contact-icon { font-size: 32px; margin-bottom: 16px; }
   .contact-title {
-    font-family: 'Cormorant Garant', serif;
+    font-family: 'Playfair Display', serif;
     font-size: 22px; font-weight: 700;
     color: #fff; margin-bottom: 8px;
   }
@@ -542,7 +694,7 @@
     border: none; border-radius: 6px;
     padding: 6px 12px; cursor: pointer;
     font-size: 11px; font-weight: 700;
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Instrument Sans', sans-serif;
     transition: background 0.2s;
   }
   .copy-btn:hover { background: var(--gold-light); }
@@ -550,7 +702,7 @@
     display: flex; align-items: center; gap: 8px;
     color: var(--gold-light);
     text-decoration: none; font-size: 18px;
-    font-family: 'Cormorant Garant', serif; font-weight: 700;
+    font-family: 'Playfair Display', serif; font-weight: 700;
     margin-top: 12px;
   }
 
@@ -558,10 +710,11 @@
   .footer {
     background: #0F1A30;
     padding: 28px 60px;
-    display: flex; align-items: center; justify-content: space-between;
+    display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 20px;
     border-top: 1px solid rgba(255,255,255,0.07);
   }
   .footer-left { font-size: 12px; color: rgba(255,255,255,0.35); }
+  .footer-center { text-align:center; }
   .footer-right { font-size: 11px; color: rgba(255,255,255,0.25); }
 
   /* ── MODAL ── */
@@ -577,7 +730,7 @@
     box-shadow: 0 20px 60px rgba(0,0,0,0.25);
   }
   .modal h3 {
-    font-family: 'Cormorant Garant', serif;
+    font-family: 'Playfair Display', serif;
     font-size: 26px; font-weight: 700;
     color: var(--navy); margin-bottom: 8px;
   }
@@ -586,7 +739,7 @@
   .modal-form input, .modal-form select, .modal-form textarea {
     padding: 10px 14px; border-radius: 7px;
     border: 1px solid var(--border);
-    font-family: 'DM Sans', sans-serif; font-size: 14px;
+    font-family: 'Instrument Sans', sans-serif; font-size: 14px;
     outline: none;
     transition: border 0.2s;
   }
@@ -598,7 +751,7 @@
     background: var(--navy); color: #fff;
     border: none; border-radius: 8px;
     padding: 12px; font-size: 14px; font-weight: 600;
-    cursor: pointer; font-family: 'DM Sans', sans-serif;
+    cursor: pointer; font-family: 'Instrument Sans', sans-serif;
     transition: background 0.2s;
   }
   .modal-submit:hover { background: var(--navy-light); }
@@ -642,10 +795,13 @@
     <a href="#packs">Client Packs</a>
     <a href="#agents">Your AI Team</a>
     <a href="#pricing">Pricing</a>
+    <a href="#reporting">Reporting</a>
+    <a href="#customers">Customers</a>
+    <a href="#clients">Demos</a>
     <a href="#contact">Contact</a>
   </nav>
   <div style="display:flex;align-items:center;gap:12px">
-    <div class="header-badge">DEMO — T4H × Hales Redden</div>
+    
     <a href="#contact" class="header-cta" onclick="openModal('pilot')">Start Pilot →</a>
   </div>
 </header>
@@ -696,7 +852,7 @@
     <div class="how-steps">
       <div class="how-step">
         <div class="how-step-num">1</div>
-        <div class="how-face">👩‍💼</div>
+        <div class="how-face"><img src="https://images.unsplash.com/photo-1551836022-deb4988cc6c0?w=600&q=80&fit=crop" alt="Accountant partner" loading="lazy"></div>
         <h3>You Sign Up as Partner</h3>
         <p>Hales Redden joins as a T4H Channel Partner. You get your own branded dashboard, access to all 8 intelligence packs, and a white-label portal. No setup costs. Free for your first 10 clients.</p>
         <div class="callout callout-blue" style="margin-top:16px">
@@ -710,7 +866,7 @@
 
       <div class="how-step">
         <div class="how-step-num">2</div>
-        <div class="how-face">🏢</div>
+        <div class="how-face"><img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&q=80&fit=crop" alt="Assigning client packs" loading="lazy"></div>
         <h3>Assign Packs to Clients</h3>
         <p>You select which Intelligence Pack suits each client — FinanceOS for smaller clients, Cashflow Guard + Virtual CFO for growth-stage businesses. Send a link and they're live in minutes.</p>
         <div class="callout callout-green" style="margin-top:16px">
@@ -724,7 +880,7 @@
 
       <div class="how-step">
         <div class="how-step-num">3</div>
-        <div class="how-face">🤖</div>
+        <div class="how-face"><img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80&fit=crop" alt="AI running weekly reports" loading="lazy"></div>
         <h3>AI Runs Weekly for Every Client</h3>
         <p>Every Monday, your 81-strong AI accounting team runs briefings for every client. Cashflow reports, KPI summaries, ATO alerts. Delivered automatically. You look great without lifting a finger.</p>
         <div class="callout callout-amber" style="margin-top:16px">
@@ -745,34 +901,7 @@
     <div class="section-label">Client Offerings</div>
     <h2 class="section-title">Intelligence Packs for Every Client</h2>
     
-    <div class="packs-intro-grid">
-      <div>
-        <p class="section-body" style="margin-bottom:16px">These are the products your clients subscribe to — billed through you, powered by AI. Each pack replaces hours of manual advisory work with automated, AI-generated intelligence delivered weekly.</p>
-        <div class="callout callout-blue">
-          <span class="callout-icon">📦</span>
-          <div>
-            <h4>What is a "Pack"?</h4>
-            <p>A Pack is a recurring intelligence subscription for one SME client. It runs automatically each week — analysing their financial data, generating reports, and emailing insights directly to the client. You configure it once. It runs forever.</p>
-          </div>
-        </div>
-      </div>
-      <div>
-        <div class="callout callout-green">
-          <span class="callout-icon">📊</span>
-          <div>
-            <h4>Your margin on each pack</h4>
-            <p>You buy at wholesale and set your own retail price. A typical client paying $299/mo = ~$133 margin to you. 100 clients = $13,300/mo new recurring revenue from existing relationships.</p>
-          </div>
-        </div>
-        <div class="callout callout-amber" style="margin-top:14px">
-          <span class="callout-icon">🎯</span>
-          <div>
-            <h4>Designed for accountants</h4>
-            <p>Every pack generates outputs your clients already expect from you — BAS prep, cashflow summaries, KPI dashboards. The AI does the production work. You take the credit.</p>
-          </div>
-        </div>
-      </div>
-    </div>
+    <p class="section-body">Your clients subscribe to a Pack — you bill them, AI runs it. Each Pack is a recurring weekly intelligence service: financial data in, briefings and reports out. You configure it once. It runs every Monday without you touching it. Typical margin: ~$133/client/month.</p>
 
     <div class="pack-cards">
       <div class="pack-card">
@@ -874,7 +1003,7 @@
 
     <div class="agents-grid">
       <div class="agent-card lead">
-        <div class="agent-avatar" style="background:rgba(196,150,42,0.2);border-color:rgba(196,150,42,0.4);font-size:28px">🎯</div>
+        <div class="agent-avatar" style="width:72px;height:72px;border-color:var(--gold)"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&q=80&fit=crop&crop=face" alt="Theo - Lead Agent" loading="lazy"></div>
         <div class="agent-name">Theo</div>
         <div class="agent-role">Chief Financial Intelligence Officer · Lead Agent</div>
         <div class="agent-desc">Orchestrates all 81 accounting agents. Reviews weekly briefing outputs before delivery. Routes anomalies to specialist sub-agents. Your clients' primary AI point of contact for financial matters.</div>
@@ -882,59 +1011,81 @@
       </div>
 
       <div class="agent-card">
-        <div class="agent-avatar">📊</div>
+        <div class="agent-avatar"><img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=200&q=80&fit=crop&crop=face" alt="Alex" loading="lazy"></div>
         <div class="agent-name">Alex</div>
         <div class="agent-role">Tax Intelligence Agent</div>
         <div class="agent-desc">Monitors ATO obligations, identifies deduction opportunities, prepares BAS-ready summaries, and flags tax risk before it becomes a problem.</div>
       </div>
 
       <div class="agent-card">
-        <div class="agent-avatar">💧</div>
+        <div class="agent-avatar"><img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&q=80&fit=crop&crop=face" alt="Sam" loading="lazy"></div>
         <div class="agent-name">Sam</div>
         <div class="agent-role">Cashflow Monitor</div>
         <div class="agent-desc">Runs 30/60/90 day runway models for every client. Raises alerts before cash pressure hits. Prioritises which invoices to chase first.</div>
       </div>
 
       <div class="agent-card">
-        <div class="agent-avatar">📋</div>
+        <div class="agent-avatar"><img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=200&q=80&fit=crop&crop=face" alt="Jordan" loading="lazy"></div>
         <div class="agent-name">Jordan</div>
         <div class="agent-role">Compliance &amp; BAS Agent</div>
         <div class="agent-desc">Tracks every compliance deadline across the client book. Generates BAS prep summaries. Sends deadline reminders automatically 4 weeks out.</div>
       </div>
 
       <div class="agent-card">
-        <div class="agent-avatar">💼</div>
+        <div class="agent-avatar"><img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=200&q=80&fit=crop&crop=face" alt="Priya" loading="lazy"></div>
         <div class="agent-name">Priya</div>
         <div class="agent-role">Payroll &amp; Super Intelligence</div>
         <div class="agent-desc">Monitors payroll obligations, super guarantee deadlines, and STP submissions. Raises anomalies and flags underpayment risk before reporting cycles close.</div>
       </div>
 
       <div class="agent-card">
-        <div class="agent-avatar">📈</div>
+        <div class="agent-avatar"><img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=200&q=80&fit=crop&crop=face" alt="Morgan" loading="lazy"></div>
         <div class="agent-name">Morgan</div>
         <div class="agent-role">P&amp;L Analyst</div>
         <div class="agent-desc">Runs weekly margin analysis by product and service. Identifies declining profitability lines and surfaces pricing opportunities based on actual transaction data.</div>
       </div>
 
       <div class="agent-card">
-        <div class="agent-avatar">🔍</div>
+        <div class="agent-avatar"><img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?w=200&q=80&fit=crop&crop=face" alt="Riley" loading="lazy"></div>
         <div class="agent-name">Riley</div>
         <div class="agent-role">Audit Readiness Agent</div>
         <div class="agent-desc">Continuously checks financial records for audit readiness. SHA-256 hashes key documents, identifies gaps, and prepares evidence packs on demand.</div>
       </div>
 
       <div class="agent-card">
-        <div class="agent-avatar">🎯</div>
+        <div class="agent-avatar"><img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=200&q=80&fit=crop&crop=face" alt="Quinn" loading="lazy"></div>
         <div class="agent-name">Quinn</div>
         <div class="agent-role">KPI Dashboard Agent</div>
         <div class="agent-desc">Populates client KPI dashboards weekly. Benchmark business performance against industry peers. Identifies leading indicators of financial stress or growth.</div>
       </div>
 
       <div class="agent-card">
-        <div class="agent-avatar">🚀</div>
+        <div class="agent-avatar"><img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=200&q=80&fit=crop&crop=face" alt="Drew" loading="lazy"></div>
         <div class="agent-name">Drew</div>
         <div class="agent-role">Growth Advisory Agent</div>
         <div class="agent-desc">Identifies growth signals in client data — revenue acceleration, margin expansion opportunities, and pricing room — and packages them into advisory talking points for you.</div>
+      </div>
+    </div>
+
+    <!-- CHATBOT + TOOLS CALLOUT -->
+    <div style="margin-top:32px;background:rgba(196,150,42,0.1);border:1px solid rgba(196,150,42,0.3);border-radius:12px;padding:24px;display:grid;grid-template-columns:1fr 1fr;gap:24px">
+      <div>
+        <div style="font-size:13px;font-weight:600;color:var(--gold-light);margin-bottom:8px;letter-spacing:0.06em;text-transform:uppercase">AI Chat Interface</div>
+        <div style="font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:#fff;margin-bottom:8px">Talk to Theo directly.</div>
+        <p style="font-size:13px;color:rgba(255,255,255,0.6);line-height:1.65">Your accountant portal includes a live chat interface — ask Theo anything about a client's finances. "What's the cashflow runway for client X?" "Are any clients at ATO risk this quarter?" Theo has context on every client in your book.</p>
+      </div>
+      <div>
+        <div style="font-size:13px;font-weight:600;color:var(--gold-light);margin-bottom:8px;letter-spacing:0.06em;text-transform:uppercase">Tools Available to Agents</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:4px">
+          <div style="font-size:12px;color:rgba(255,255,255,0.65);display:flex;gap:8px;align-items:center"><span style="color:var(--gold-light)">✓</span> Xero / MYOB connect</div>
+          <div style="font-size:12px;color:rgba(255,255,255,0.65);display:flex;gap:8px;align-items:center"><span style="color:var(--gold-light)">✓</span> BASIQ open banking</div>
+          <div style="font-size:12px;color:rgba(255,255,255,0.65);display:flex;gap:8px;align-items:center"><span style="color:var(--gold-light)">✓</span> ATO reporting API</div>
+          <div style="font-size:12px;color:rgba(255,255,255,0.65);display:flex;gap:8px;align-items:center"><span style="color:var(--gold-light)">✓</span> Email briefing send</div>
+          <div style="font-size:12px;color:rgba(255,255,255,0.65);display:flex;gap:8px;align-items:center"><span style="color:var(--gold-light)">✓</span> Document store</div>
+          <div style="font-size:12px;color:rgba(255,255,255,0.65);display:flex;gap:8px;align-items:center"><span style="color:var(--gold-light)">✓</span> SHA-256 audit log</div>
+          <div style="font-size:12px;color:rgba(255,255,255,0.65);display:flex;gap:8px;align-items:center"><span style="color:var(--gold-light)">✓</span> Calendar / deadline</div>
+          <div style="font-size:12px;color:rgba(255,255,255,0.65);display:flex;gap:8px;align-items:center"><span style="color:var(--gold-light)">✓</span> Web search (live)</div>
+        </div>
       </div>
     </div>
 
@@ -992,7 +1143,7 @@
         </div>
         <div>
           <div class="calc-label">Platform fee (Growth Partner)</div>
-          <div style="padding:10px 0;font-size:18px;font-weight:700;color:var(--navy);font-family:'Cormorant Garant',serif">$299/mo</div>
+          <div style="padding:10px 0;font-size:18px;font-weight:700;color:var(--navy);font-family:'Playfair Display',serif">$299/mo</div>
           <div style="font-size:11px;color:var(--muted)">Fixed — all 8 packs included</div>
         </div>
       </div>
@@ -1120,69 +1271,178 @@
       </div>
     </div>
 
+  <!-- DEPLOYMENT OPTIONS -->
+    <div style="margin-top:48px;padding-top:36px;border-top:1px solid var(--border)">
+      <div class="section-label">Deployment Options</div>
+      <h3 style="font-family:'Playfair Display',serif;font-size:26px;font-weight:700;color:var(--navy);margin-bottom:8px">Cloud or on-premise. Your choice.</h3>
+      <p style="color:var(--text-light);font-size:14px;margin-bottom:28px;max-width:600px;line-height:1.7">Most firms run fully on T4H cloud. For practices with data sovereignty requirements or large client books, the agent stack can be deployed on your own infrastructure — or even run locally, disconnected.</p>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px">
+        <div style="background:#fff;border:1px solid var(--border);border-radius:12px;padding:24px">
+          <div style="font-size:24px;margin-bottom:12px">☁️</div>
+          <div style="font-family:'Playfair Display',serif;font-size:18px;font-weight:700;color:var(--navy);margin-bottom:6px">Cloud — Managed</div>
+          <div style="font-size:13px;font-weight:600;color:var(--gold);margin-bottom:12px">Included in Partner plan</div>
+          <ul style="list-style:none;font-size:13px;color:var(--text-light);line-height:2">
+            <li>✓ Zero infrastructure overhead</li>
+            <li>✓ Auto-updates &amp; backups</li>
+            <li>✓ Multi-tenant by design</li>
+            <li>✓ 99.9% SLA — AWS ap-southeast-2</li>
+          </ul>
+        </div>
+        <div style="background:#fff;border:1px solid var(--gold);border-radius:12px;padding:24px;box-shadow:0 0 0 2px rgba(196,150,42,0.1)">
+          <div style="font-size:24px;margin-bottom:12px">🏢</div>
+          <div style="font-family:'Playfair Display',serif;font-size:18px;font-weight:700;color:var(--navy);margin-bottom:6px">On-Premise</div>
+          <div style="font-size:13px;font-weight:600;color:var(--gold);margin-bottom:12px">From $2,500/mo · custom quote</div>
+          <ul style="list-style:none;font-size:13px;color:var(--text-light);line-height:2">
+            <li>✓ Runs inside your network</li>
+            <li>✓ Client data never leaves your servers</li>
+            <li>✓ APRA/data sovereignty ready</li>
+            <li>✓ T4H managed deployment &amp; updates</li>
+          </ul>
+        </div>
+        <div style="background:#fff;border:1px solid var(--border);border-radius:12px;padding:24px">
+          <div style="font-size:24px;margin-bottom:12px">💻</div>
+          <div style="font-family:'Playfair Display',serif;font-size:18px;font-weight:700;color:var(--navy);margin-bottom:6px">Desktop Agent</div>
+          <div style="font-size:13px;font-weight:600;color:var(--gold);margin-bottom:12px">Available Q3 2026</div>
+          <ul style="list-style:none;font-size:13px;color:var(--text-light);line-height:2">
+            <li>✓ Runs on your laptop — fully offline</li>
+            <li>✓ No internet required after setup</li>
+            <li>✓ Syncs when reconnected</li>
+            <li>✓ Ideal for remote or secure environments</li>
+          </ul>
+          <div style="margin-top:10px;font-size:11px;color:var(--muted);background:var(--cream);padding:8px 10px;border-radius:6px">
+            Yes — a Theo agent can run on your desktop, analyse a client's Xero export, and produce the full briefing pack with no internet connection.
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 
-<!-- MAAT INTEGRATION -->
+<!-- FACTOR · GATEWAY · MRI -->
 <section class="section section-alt" id="system">
   <div class="section-inner">
     <div class="section-label">Your Intelligence Layer</div>
-    <h2 class="section-title">Already running inside T4H.</h2>
-    <p class="section-body">The T4H MAAT (Measurement, Accountability, Auditing, Trust) system is the financial intelligence engine behind every pack. It's not being built — it's already live, with 3,450+ transactions, 250 registered sources, and 85 ready-to-generate reports.</p>
+    <h2 class="section-title">The engine is already running.</h2>
+    <p class="section-body">Factor · Gateway · MRI is the financial intelligence stack powering every Pack. Factor structures your clients' transactions. Gateway connects their bank accounts — ANZ, CBA, Amex and 30+ institutions. MRI turns that data into firm-grade reports. Not a prototype — live now, running real transactions today.</p>
+
+    <!-- Portal access tabs -->
+    <div style="display:flex;gap:10px;margin-bottom:36px;flex-wrap:wrap">
+      <a href="https://mcp-command-centre.vercel.app/accountant" target="_blank" class="portal-tab">
+        <span style="font-size:20px">🔐</span>
+        <div>
+          <div style="font-size:12px;font-weight:600;color:var(--navy)">Accountant Portal</div>
+          <div style="font-size:11px;color:var(--muted)">Andrew Douglas · Live access</div>
+        </div>
+      </a>
+      <a href="https://accountant-client-workspace-6tlmi0thv.vercel.app" target="_blank" class="portal-tab">
+        <span style="font-size:20px">👤</span>
+        <div>
+          <div style="font-size:12px;font-weight:600;color:var(--navy)">Client Portal</div>
+          <div style="font-size:11px;color:var(--muted)">SME workspace · Demo ready</div>
+        </div>
+      </a>
+      <a href="https://mcp-command-centre.vercel.app/docs" target="_blank" class="portal-tab">
+        <span style="font-size:20px">📁</span>
+        <div>
+          <div style="font-size:12px;font-weight:600;color:var(--navy)">Document Store</div>
+          <div style="font-size:11px;color:var(--muted)">Reports · Evidence · Packs</div>
+        </div>
+      </a>
+      <a href="https://accountant-pack-intake-mlz8y9zyp-troys-projects-t4h-machine.vercel.app" target="_blank" class="portal-tab">
+        <span style="font-size:20px">📋</span>
+        <div>
+          <div style="font-size:12px;font-weight:600;color:var(--navy)">Pack Intake Quiz</div>
+          <div style="font-size:11px;color:var(--muted)">Client self-qualification</div>
+        </div>
+      </a>
+      <button onclick="openFactorAI()" class="portal-tab" style="border:none;cursor:pointer;background:var(--navy);border:2px solid var(--gold);text-align:left">
+        <span style="font-size:20px">🤖</span>
+        <div>
+          <div style="font-size:12px;font-weight:600;color:var(--gold-light)">Ask Factor AI</div>
+          <div style="font-size:11px;color:rgba(255,255,255,0.5)">Live intelligence · Factor · MRI</div>
+        </div>
+      </button>
+    </div>
+
+    <!-- Live stats row -->
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:36px">
+      <div style="background:var(--navy);border-radius:10px;padding:20px 18px;text-align:center">
+        <div style="font-family:'Playfair Display',serif;font-size:32px;font-weight:700;color:var(--gold-light)">3,450</div>
+        <div style="font-size:11px;color:rgba(255,255,255,0.5);margin-top:4px">Transactions processed</div>
+      </div>
+      <div style="background:var(--navy);border-radius:10px;padding:20px 18px;text-align:center">
+        <div style="font-family:'Playfair Display',serif;font-size:32px;font-weight:700;color:var(--gold-light)">250</div>
+        <div style="font-size:11px;color:rgba(255,255,255,0.5);margin-top:4px">Registered data sources</div>
+      </div>
+      <div style="background:var(--navy);border-radius:10px;padding:20px 18px;text-align:center">
+        <div style="font-family:'Playfair Display',serif;font-size:32px;font-weight:700;color:var(--gold-light)">121</div>
+        <div style="font-size:11px;color:rgba(255,255,255,0.5);margin-top:4px">Reports in portal</div>
+      </div>
+      <div style="background:var(--navy);border-radius:10px;padding:20px 18px;text-align:center">
+        <div style="font-family:'Playfair Display',serif;font-size:32px;font-weight:700;color:var(--gold-light)">85</div>
+        <div style="font-size:11px;color:rgba(255,255,255,0.5);margin-top:4px">Report templates live</div>
+      </div>
+    </div>
 
     <div class="maat-grid">
+      <!-- Left: what Factor/Gateway/MRI does in plain language -->
       <div>
-        <div class="callout callout-blue" style="margin-bottom:18px">
-          <span class="callout-icon">🏗️</span>
-          <div>
-            <h4>What is MAAT?</h4>
-            <p>MAAT is the financial data layer that powers every Intelligence Pack. It aggregates transactions across all accounts, categorises them automatically, and feeds structured financial intelligence to the AI agents for report generation. Your clients' data flows through MAAT — and out as weekly briefings.</p>
+        <h3 style="font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:var(--navy);margin-bottom:20px">What your clients actually get</h3>
+
+        <div style="display:flex;flex-direction:column;gap:14px">
+          <div style="background:#fff;border:1px solid var(--border);border-radius:10px;padding:18px 20px;display:flex;gap:16px;align-items:flex-start">
+            <div style="width:40px;height:40px;background:var(--green-bg);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0">✅</div>
+            <div>
+              <div style="font-weight:600;color:var(--navy);font-size:14px;margin-bottom:4px">BAS Preparation</div>
+              <div style="font-size:13px;color:var(--text-light);line-height:1.6">Transactions auto-categorised against ATO codes every week. BAS quarters close with a single review — not a week of spreadsheets. Your clients stop dreading it.</div>
+            </div>
+          </div>
+
+          <div style="background:#fff;border:1px solid var(--border);border-radius:10px;padding:18px 20px;display:flex;gap:16px;align-items:flex-start">
+            <div style="width:40px;height:40px;background:var(--blue-bg);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0">🧾</div>
+            <div>
+              <div style="font-weight:600;color:var(--navy);font-size:14px;margin-bottom:4px">Invoicing &amp; Debtors</div>
+              <div style="font-size:13px;color:var(--text-light);line-height:1.6">Outstanding invoices tracked automatically. Priority chase list generated each Monday. Clients know exactly who owes what and when — without opening Xero.</div>
+            </div>
+          </div>
+
+          <div style="background:#fff;border:1px solid var(--border);border-radius:10px;padding:18px 20px;display:flex;gap:16px;align-items:flex-start">
+            <div style="width:40px;height:40px;background:var(--amber-bg);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0">⏱️</div>
+            <div>
+              <div style="font-weight:600;color:var(--navy);font-size:14px;margin-bottom:4px">Timesheets &amp; Payroll</div>
+              <div style="font-size:13px;color:var(--text-light);line-height:1.6">Super guarantee deadlines tracked. STP submissions monitored. Payroll anomalies flagged before reporting cycles close — not after the ATO writes to them.</div>
+            </div>
+          </div>
+
+          <div style="background:#fff;border:1px solid var(--border);border-radius:10px;padding:18px 20px;display:flex;gap:16px;align-items:flex-start">
+            <div style="width:40px;height:40px;background:var(--blue-bg);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0">📊</div>
+            <div>
+              <div style="font-weight:600;color:var(--navy);font-size:14px;margin-bottom:4px">Cashflow &amp; P&amp;L</div>
+              <div style="font-size:13px;color:var(--text-light);line-height:1.6">30/60/90 day runway visible every Monday. Margin by product or service line. A simple summary they can actually read — not a 40-tab Excel file.</div>
+            </div>
           </div>
         </div>
-        <div class="callout callout-green" style="margin-bottom:18px">
-          <span class="callout-icon">🔗</span>
+
+        <div class="callout callout-amber" style="margin-top:18px">
+          <span class="callout-icon">🏦</span>
           <div>
-            <h4>Already integrated for Hales Redden</h4>
-            <p>Your firm is already onboarded in the MAAT system. Andrew Douglas has access to the accountant portal. The data model for your client book is pre-wired — adding clients is link-and-go.</p>
-          </div>
-        </div>
-        <div class="callout callout-amber">
-          <span class="callout-icon">📤</span>
-          <div>
-            <h4>Open Banking Ready</h4>
-            <p>MAAT supports BASIQ open banking integration — clients can connect their ANZ, CBA, Amex, and Bendigo accounts directly for real-time transaction feeds. No manual CSV uploads.</p>
+            <h4>Open Banking Ready (BASIQ)</h4>
+            <p>Clients connect ANZ, CBA, Amex, Bendigo accounts directly. Real-time transaction feeds. No manual CSV uploads. No data entry.</p>
           </div>
         </div>
       </div>
 
+      <!-- Right: live console view -->
       <div class="maat-vis">
         <div class="maat-vis-header">
           <div class="maat-vis-dot" style="background:#FF5F57"></div>
           <div class="maat-vis-dot" style="background:#FFBB2C"></div>
           <div class="maat-vis-dot" style="background:#28C840"></div>
-          <span class="maat-vis-title">MAAT Intelligence Console — Hales Redden View</span>
+          <span class="maat-vis-title">Factor Intelligence Console — Hales Redden · Andrew Douglas</span>
         </div>
         <div class="maat-vis-body">
-          <div class="maat-stat-row">
-            <div class="maat-stat">
-              <span class="maat-stat-n">3,450</span>
-              <div class="maat-stat-l">Transactions processed</div>
-            </div>
-            <div class="maat-stat">
-              <span class="maat-stat-n">250</span>
-              <div class="maat-stat-l">Registered data sources</div>
-            </div>
-            <div class="maat-stat">
-              <span class="maat-stat-n">85</span>
-              <div class="maat-stat-l">Report templates ready</div>
-            </div>
-            <div class="maat-stat">
-              <span class="maat-stat-n">121</span>
-              <div class="maat-stat-l">Reports in accountant portal</div>
-            </div>
-          </div>
-          <hr class="maat-divider">
-          <div style="font-size:11px;font-weight:600;color:var(--muted);margin-bottom:10px;letter-spacing:0.06em;text-transform:uppercase">Available Reports</div>
+          <div style="font-size:11px;font-weight:600;color:var(--muted);margin-bottom:10px;letter-spacing:0.06em;text-transform:uppercase">Reports Available Now</div>
           <ul class="maat-report-list">
             <li class="maat-report-item">
               <span class="maat-report-name">BAS Quarterly Summary</span>
@@ -1213,20 +1473,740 @@
               <span class="maat-badge badge-ready">READY</span>
             </li>
             <li class="maat-report-item">
+              <span class="maat-report-name">Timesheet &amp; Super Register</span>
+              <span class="maat-badge badge-ready">READY</span>
+            </li>
+            <li class="maat-report-item">
               <span class="maat-report-name">Open Banking Feed (BASIQ)</span>
               <span class="maat-badge badge-wave">Q2 2026</span>
             </li>
           </ul>
-          <div style="margin-top:16px;padding:12px;background:var(--navy);border-radius:8px;text-align:center">
-            <div style="font-size:11px;color:rgba(255,255,255,0.5);margin-bottom:6px">Accountant Portal</div>
-            <div style="font-size:12px;color:var(--gold-light);font-weight:600">mcp-command-centre.vercel.app/accountant</div>
-            <div style="font-size:10px;color:rgba(255,255,255,0.35);margin-top:4px">Andrew Douglas access · Token exp. Sep 2026</div>
+          <hr class="maat-divider">
+          <div style="background:var(--navy);border-radius:8px;padding:14px;text-align:center;margin-top:4px">
+            <div style="font-size:11px;color:rgba(255,255,255,0.4);margin-bottom:6px">Your firm is already registered · Pilot expires Jun 2026</div>
+            <a href="https://mcp-command-centre.vercel.app/accountant" target="_blank" style="font-size:12px;color:var(--gold-light);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(196,150,42,0.3)">Open accountant portal →</a>
+          </div>
+
+          <!-- Client doc sharing section - Troy as client #6 -->
+          <hr class="maat-divider" style="margin-top:16px">
+          <div style="font-size:11px;font-weight:600;color:var(--muted);margin-bottom:10px;letter-spacing:0.06em;text-transform:uppercase">Platform Demos &amp; Shared Docs</div>
+          <div style="background:var(--blue-bg);border-radius:8px;padding:12px 14px;margin-bottom:8px;display:flex;justify-content:space-between;align-items:center">
+            <div>
+              <div style="font-size:12px;font-weight:600;color:var(--navy)">Tech 4 Humanity — Troy Latter</div>
+              <div style="font-size:11px;color:var(--muted)">CFO Brief · Gap Analysis · BAS Pack · RDTI docs</div>
+            </div>
+            <a href="https://mcp-command-centre.vercel.app/docs" target="_blank" style="font-size:11px;color:#3B6FCC;font-weight:600;text-decoration:none;white-space:nowrap">View docs →</a>
+          </div>
+          <div style="background:var(--cream);border-radius:8px;padding:12px 14px;text-align:center">
+            <div style="font-size:11px;color:var(--muted)">Each client below has a document workspace with shared reports and correspondence</div>
           </div>
         </div>
       </div>
     </div>
   </div>
+</section><!-- REPORTING DASHBOARD -->
+<section class="section" id="reporting" style="background:var(--navy)">
+  <div class="section-inner">
+    <div class="section-label" style="color:var(--gold-light)">Business Intelligence</div>
+    <h2 class="section-title light">Portfolio dashboard.</h2>
+    <p style="color:rgba(255,255,255,0.6);font-size:15px;max-width:600px;margin-bottom:36px;line-height:1.7">What Hales Redden would see across their entire client book — revenue, cashflow health, compliance risk, and AI activity — in one view.</p>
+
+    <!-- Summary KPIs -->
+    <div style="display:grid;grid-template-columns:repeat(6,1fr);gap:14px;margin-bottom:32px">
+      <div class="rpt-kpi">
+        <span class="rpt-kpi-n">6</span>
+        <span class="rpt-kpi-l">Active clients</span>
+      </div>
+      <div class="rpt-kpi">
+        <span class="rpt-kpi-n">$16.4M</span>
+        <span class="rpt-kpi-l">Combined revenue</span>
+      </div>
+      <div class="rpt-kpi">
+        <span class="rpt-kpi-n">$2,050</span>
+        <span class="rpt-kpi-l">Monthly margin</span>
+      </div>
+      <div class="rpt-kpi">
+        <span class="rpt-kpi-n">18</span>
+        <span class="rpt-kpi-l">Active packs</span>
+      </div>
+      <div class="rpt-kpi">
+        <span class="rpt-kpi-n">24</span>
+        <span class="rpt-kpi-l">Reports generated</span>
+      </div>
+      <div class="rpt-kpi rpt-kpi-alert">
+        <span class="rpt-kpi-n" style="color:#FCA5A5">2</span>
+        <span class="rpt-kpi-l">Compliance alerts</span>
+      </div>
+    </div>
+
+    <!-- Tab nav -->
+    <div style="display:flex;gap:0;border-bottom:1px solid rgba(255,255,255,0.12);margin-bottom:28px">
+      <button class="rpt-tab active" onclick="rptTab(this,'rpt-cashflow')">Cashflow Health</button>
+      <button class="rpt-tab" onclick="rptTab(this,'rpt-compliance')">Compliance</button>
+      <button class="rpt-tab" onclick="rptTab(this,'rpt-activity')">AI Activity</button>
+      <button class="rpt-tab" onclick="rptTab(this,'rpt-revenue')">Revenue</button>
+    </div>
+
+    <!-- Tab: Cashflow Health -->
+    <div id="rpt-cashflow" class="rpt-panel">
+      <div class="rpt-table-wrap">
+        <table class="rpt-table">
+          <thead>
+            <tr>
+              <th>Client</th>
+              <th>Industry</th>
+              <th>30-Day Runway</th>
+              <th>60-Day</th>
+              <th>90-Day</th>
+              <th>Outstanding Invoices</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="rpt-td-name">Coastal Build Co</td>
+              <td class="rpt-td-muted">Construction</td>
+              <td><span class="rpt-runway rpt-green">$187K</span></td>
+              <td><span class="rpt-runway rpt-green">$142K</span></td>
+              <td><span class="rpt-runway rpt-amber">$68K</span></td>
+              <td>$34,200 (3 invoices)</td>
+              <td><span class="rpt-badge rpt-badge-ok">Healthy</span></td>
+            </tr>
+            <tr>
+              <td class="rpt-td-name">Metro Property Group</td>
+              <td class="rpt-td-muted">Property</td>
+              <td><span class="rpt-runway rpt-green">$312K</span></td>
+              <td><span class="rpt-runway rpt-green">$290K</span></td>
+              <td><span class="rpt-runway rpt-green">$255K</span></td>
+              <td>$18,500 (1 invoice)</td>
+              <td><span class="rpt-badge rpt-badge-ok">Healthy</span></td>
+            </tr>
+            <tr>
+              <td class="rpt-td-name">Skyline Kitchen &amp; Bath</td>
+              <td class="rpt-td-muted">Retail</td>
+              <td><span class="rpt-runway rpt-amber">$41K</span></td>
+              <td><span class="rpt-runway rpt-red">$12K</span></td>
+              <td><span class="rpt-runway rpt-red">-$8K</span></td>
+              <td>$67,800 (8 invoices)</td>
+              <td><span class="rpt-badge rpt-badge-risk">At Risk</span></td>
+            </tr>
+            <tr>
+              <td class="rpt-td-name">Harbour Legal Group</td>
+              <td class="rpt-td-muted">Professional Services</td>
+              <td><span class="rpt-runway rpt-green">$428K</span></td>
+              <td><span class="rpt-runway rpt-green">$395K</span></td>
+              <td><span class="rpt-runway rpt-green">$360K</span></td>
+              <td>$102,400 (12 invoices)</td>
+              <td><span class="rpt-badge rpt-badge-ok">Healthy</span></td>
+            </tr>
+            <tr>
+              <td class="rpt-td-name">Northern Fresh Produce</td>
+              <td class="rpt-td-muted">Wholesale</td>
+              <td><span class="rpt-runway rpt-amber">$94K</span></td>
+              <td><span class="rpt-runway rpt-amber">$58K</span></td>
+              <td><span class="rpt-runway rpt-amber">$22K</span></td>
+              <td>$88,300 (7 invoices)</td>
+              <td><span class="rpt-badge rpt-badge-warn">Watch</span></td>
+            </tr>
+            <tr style="background:rgba(196,150,42,0.06);border-top:1px solid rgba(196,150,42,0.2)">
+              <td class="rpt-td-name" style="color:var(--gold-light)">Tech 4 Humanity</td>
+              <td class="rpt-td-muted">AI R&amp;D</td>
+              <td><span class="rpt-runway rpt-red">$28K</span></td>
+              <td><span class="rpt-runway rpt-red">$14K</span></td>
+              <td><span class="rpt-runway rpt-red">$0K</span></td>
+              <td>$22,797 BAS refund pending</td>
+              <td><span class="rpt-badge rpt-badge-risk">Monitor</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div style="margin-top:16px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px">
+        <div class="rpt-insight">
+          <div class="rpt-insight-icon" style="color:#FCA5A5">⚠️</div>
+          <div>
+            <div class="rpt-insight-title">Skyline at 90-day risk</div>
+            <div class="rpt-insight-body">Negative cashflow projected by Aug 2026. Chase list has 8 outstanding invoices totalling $67,800. Recommend immediate follow-up.</div>
+          </div>
+        </div>
+        <div class="rpt-insight">
+          <div class="rpt-insight-icon">📈</div>
+          <div>
+            <div class="rpt-insight-title">Harbour Legal strongest</div>
+            <div class="rpt-insight-body">$360K+ runway at 90 days. Margin expanding Q2. Prime candidate for Complete Business OS upgrade.</div>
+          </div>
+        </div>
+        <div class="rpt-insight">
+          <div class="rpt-insight-icon">💡</div>
+          <div>
+            <div class="rpt-insight-title">T4H — BAS refund timing</div>
+            <div class="rpt-insight-body">$22,797 BAS refund pending ATO processing. Runway improves significantly once received. RDTI claim ($238K) provides upside.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tab: Compliance -->
+    <div id="rpt-compliance" class="rpt-panel" style="display:none">
+      <div class="rpt-table-wrap">
+        <table class="rpt-table">
+          <thead>
+            <tr>
+              <th>Client</th>
+              <th>BAS Status</th>
+              <th>PAYG / Super</th>
+              <th>STP</th>
+              <th>Next Deadline</th>
+              <th>Risk Score</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="rpt-td-name">Coastal Build Co</td>
+              <td><span class="rpt-badge rpt-badge-ok">Lodged</span></td>
+              <td><span class="rpt-badge rpt-badge-ok">Current</span></td>
+              <td><span class="rpt-badge rpt-badge-ok">Active</span></td>
+              <td>Q3 BAS — 28 Oct 2026</td>
+              <td><span class="rpt-score rpt-score-low">Low</span></td>
+            </tr>
+            <tr>
+              <td class="rpt-td-name">Metro Property Group</td>
+              <td><span class="rpt-badge rpt-badge-ok">Lodged</span></td>
+              <td><span class="rpt-badge rpt-badge-ok">Current</span></td>
+              <td><span class="rpt-badge rpt-badge-muted">N/A</span></td>
+              <td>Q3 BAS — 28 Oct 2026</td>
+              <td><span class="rpt-score rpt-score-low">Low</span></td>
+            </tr>
+            <tr>
+              <td class="rpt-td-name">Skyline Kitchen &amp; Bath</td>
+              <td><span class="rpt-badge rpt-badge-warn">Due soon</span></td>
+              <td><span class="rpt-badge rpt-badge-risk">Overdue</span></td>
+              <td><span class="rpt-badge rpt-badge-warn">Late</span></td>
+              <td style="color:#FCA5A5;font-weight:600">Super Q3 — OVERDUE</td>
+              <td><span class="rpt-score rpt-score-high">High</span></td>
+            </tr>
+            <tr>
+              <td class="rpt-td-name">Harbour Legal Group</td>
+              <td><span class="rpt-badge rpt-badge-ok">Lodged</span></td>
+              <td><span class="rpt-badge rpt-badge-ok">Current</span></td>
+              <td><span class="rpt-badge rpt-badge-ok">Active</span></td>
+              <td>Q3 BAS — 28 Oct 2026</td>
+              <td><span class="rpt-score rpt-score-low">Low</span></td>
+            </tr>
+            <tr>
+              <td class="rpt-td-name">Northern Fresh Produce</td>
+              <td><span class="rpt-badge rpt-badge-ok">Lodged</span></td>
+              <td><span class="rpt-badge rpt-badge-warn">Due 28 Apr</span></td>
+              <td><span class="rpt-badge rpt-badge-ok">Active</span></td>
+              <td>Super Q4 — 28 Apr 2026</td>
+              <td><span class="rpt-score rpt-score-med">Medium</span></td>
+            </tr>
+            <tr style="background:rgba(196,150,42,0.06)">
+              <td class="rpt-td-name" style="color:var(--gold-light)">Tech 4 Humanity</td>
+              <td><span class="rpt-badge rpt-badge-ok">Lodged Mar</span></td>
+              <td><span class="rpt-badge rpt-badge-ok">Director only</span></td>
+              <td><span class="rpt-badge rpt-badge-muted">N/A</span></td>
+              <td>RDTI Registration lodged — PYV4R3VPW</td>
+              <td><span class="rpt-score rpt-score-low">Low</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div style="margin-top:16px;background:rgba(220,38,38,0.1);border:1px solid rgba(220,38,38,0.25);border-radius:10px;padding:16px 20px;display:flex;gap:14px">
+        <div style="font-size:22px">🚨</div>
+        <div>
+          <div style="font-size:13px;font-weight:600;color:#FCA5A5;margin-bottom:4px">Action required: Skyline Kitchen &amp; Bath</div>
+          <div style="font-size:13px;color:rgba(255,255,255,0.6)">Super guarantee Q3 is overdue. PAYG also flagged. STP not active. Theo has generated a compliance alert pack — recommend scheduling a call with this client this week.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tab: AI Activity -->
+    <div id="rpt-activity" class="rpt-panel" style="display:none">
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:24px">
+        <div class="rpt-act-stat">
+          <span style="font-family:'Playfair Display',serif;font-size:36px;font-weight:700;color:var(--gold-light)">47</span>
+          <span style="font-size:11px;color:rgba(255,255,255,0.4);margin-top:4px">Briefings sent this month</span>
+        </div>
+        <div class="rpt-act-stat">
+          <span style="font-family:'Playfair Display',serif;font-size:36px;font-weight:700;color:var(--gold-light)">6</span>
+          <span style="font-size:11px;color:rgba(255,255,255,0.4);margin-top:4px">Clients on weekly cycle</span>
+        </div>
+        <div class="rpt-act-stat">
+          <span style="font-family:'Playfair Display',serif;font-size:36px;font-weight:700;color:var(--gold-light)">100%</span>
+          <span style="font-size:11px;color:rgba(255,255,255,0.4);margin-top:4px">Delivery rate</span>
+        </div>
+      </div>
+      <div class="rpt-table-wrap">
+        <table class="rpt-table">
+          <thead>
+            <tr><th>Date</th><th>Client</th><th>Report Type</th><th>Agent</th><th>Status</th></tr>
+          </thead>
+          <tbody>
+            <tr><td class="rpt-td-muted">Today 06:51</td><td class="rpt-td-name">All clients</td><td>Billing Margin Sync</td><td>Theo</td><td><span class="rpt-badge rpt-badge-ok">Complete</span></td></tr>
+            <tr><td class="rpt-td-muted">Today 06:36</td><td class="rpt-td-name">Harbour Legal</td><td>vCFO Report Builder</td><td>Morgan / Quinn</td><td><span class="rpt-badge rpt-badge-ok">Complete</span></td></tr>
+            <tr><td class="rpt-td-muted">Today 06:06</td><td class="rpt-td-name">Skyline Kitchen</td><td>Compliance Alert Pack</td><td>Jordan</td><td><span class="rpt-badge rpt-badge-risk">Action needed</span></td></tr>
+            <tr><td class="rpt-td-muted">Today 06:06</td><td class="rpt-td-name">Northern Fresh</td><td>Cashflow Signal Engine</td><td>Sam</td><td><span class="rpt-badge rpt-badge-warn">Watch</span></td></tr>
+            <tr><td class="rpt-td-muted">Today 05:51</td><td class="rpt-td-name">All clients</td><td>Billing Margin Sync</td><td>Theo</td><td><span class="rpt-badge rpt-badge-ok">Complete</span></td></tr>
+            <tr><td class="rpt-td-muted">Mon 31 Mar</td><td class="rpt-td-name">Coastal Build</td><td>Weekly Cashflow Brief</td><td>Sam</td><td><span class="rpt-badge rpt-badge-ok">Delivered</span></td></tr>
+            <tr><td class="rpt-td-muted">Mon 31 Mar</td><td class="rpt-td-name">Metro Property</td><td>Weekly KPI Summary</td><td>Quinn</td><td><span class="rpt-badge rpt-badge-ok">Delivered</span></td></tr>
+            <tr><td class="rpt-td-muted">Mon 31 Mar</td><td class="rpt-td-name">Tech 4 Humanity</td><td>BAS Pack + RDTI Evidence</td><td>Alex / Riley</td><td><span class="rpt-badge rpt-badge-ok">Delivered</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Tab: Revenue -->
+    <div id="rpt-revenue" class="rpt-panel" style="display:none">
+      <div class="rpt-table-wrap">
+        <table class="rpt-table">
+          <thead>
+            <tr>
+              <th>Client</th>
+              <th>Pack</th>
+              <th>Retail/mo</th>
+              <th>Wholesale/mo</th>
+              <th>Your Margin</th>
+              <th>Annual Margin</th>
+              <th>Tier</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="rpt-td-name">Coastal Build Co</td>
+              <td>FinanceOS + Cashflow + Compliance</td>
+              <td>$378</td>
+              <td>$210</td>
+              <td style="color:#34d399;font-weight:600">$168</td>
+              <td style="color:#34d399">$2,016</td>
+              <td><span class="rpt-badge rpt-badge-ok">Growth</span></td>
+            </tr>
+            <tr>
+              <td class="rpt-td-name">Metro Property Group</td>
+              <td>Virtual CFO + Cashflow Guard</td>
+              <td>$448</td>
+              <td>$270</td>
+              <td style="color:#34d399;font-weight:600">$178</td>
+              <td style="color:#34d399">$2,136</td>
+              <td><span class="rpt-badge rpt-badge-ok">Growth</span></td>
+            </tr>
+            <tr>
+              <td class="rpt-td-name">Skyline Kitchen &amp; Bath</td>
+              <td>FinanceOS + Growth Advisory</td>
+              <td>$298</td>
+              <td>$168</td>
+              <td style="color:#34d399;font-weight:600">$130</td>
+              <td style="color:#34d399">$1,560</td>
+              <td><span class="rpt-badge rpt-badge-warn">Starter</span></td>
+            </tr>
+            <tr>
+              <td class="rpt-td-name">Harbour Legal Group</td>
+              <td>Virtual CFO + Compliance Ready</td>
+              <td>$448</td>
+              <td>$265</td>
+              <td style="color:#34d399;font-weight:600">$183</td>
+              <td style="color:#34d399">$2,196</td>
+              <td><span class="rpt-badge rpt-badge-ok">Growth</span></td>
+            </tr>
+            <tr>
+              <td class="rpt-td-name">Northern Fresh Produce</td>
+              <td>Cashflow Guard + FinanceOS</td>
+              <td>$348</td>
+              <td>$195</td>
+              <td style="color:#34d399;font-weight:600">$153</td>
+              <td style="color:#34d399">$1,836</td>
+              <td><span class="rpt-badge rpt-badge-ok">Growth</span></td>
+            </tr>
+            <tr style="background:rgba(196,150,42,0.06)">
+              <td class="rpt-td-name" style="color:var(--gold-light)">Tech 4 Humanity</td>
+              <td>Complete Business OS</td>
+              <td>$699</td>
+              <td>$399</td>
+              <td style="color:var(--gold-light);font-weight:600">$300</td>
+              <td style="color:var(--gold-light)">$3,600</td>
+              <td><span class="rpt-badge" style="background:rgba(196,150,42,0.2);color:var(--gold-light)">Complete</span></td>
+            </tr>
+            <tr style="background:rgba(255,255,255,0.05);border-top:2px solid rgba(255,255,255,0.15)">
+              <td colspan="4" style="font-weight:600;color:#fff;font-size:13px">TOTAL (6 clients)</td>
+              <td style="color:#34d399;font-weight:700;font-size:15px">$1,112/mo</td>
+              <td style="color:#34d399;font-weight:700">$13,344/yr</td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div style="margin-top:16px;background:rgba(196,150,42,0.1);border:1px solid rgba(196,150,42,0.25);border-radius:10px;padding:16px 20px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px">
+        <div style="text-align:center">
+          <div style="font-family:'Playfair Display',serif;font-size:28px;font-weight:700;color:var(--gold-light)">$1,112</div>
+          <div style="font-size:11px;color:rgba(255,255,255,0.45)">Monthly margin right now</div>
+        </div>
+        <div style="text-align:center">
+          <div style="font-family:'Playfair Display',serif;font-size:28px;font-weight:700;color:var(--gold-light)">$13,344</div>
+          <div style="font-size:11px;color:rgba(255,255,255,0.45)">Annual recurring (6 clients)</div>
+        </div>
+        <div style="text-align:center">
+          <div style="font-family:'Playfair Display',serif;font-size:28px;font-weight:700;color:var(--gold-light)">$133+</div>
+          <div style="font-size:11px;color:rgba(255,255,255,0.45)">Average margin per client</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
 </section>
+
+<!-- CUSTOMERS -->
+<section class="section" id="customers">
+  <div class="section-inner">
+    <div class="section-label">Client Workspaces</div>
+    <h2 class="section-title">Your client book.</h2>
+    <p class="section-body">Six active workspaces — each one a configured, running intelligence environment. Click any client to see their live reports, compliance status, and weekly briefing history.</p>
+
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px">
+
+      <!-- Hales Redden itself -->
+      <div class="cust-card cust-card-partner">
+        <div class="cust-card-top">
+          <div class="cust-avatar-lg" style="background:rgba(196,150,42,0.2);color:var(--gold)">HR</div>
+          <div class="cust-status-pill cust-status-partner">PARTNER</div>
+        </div>
+        <div class="cust-name">Hales Redden &amp; Partners</div>
+        <div class="cust-industry">Chartered Accountants · Est. 1950</div>
+        <div class="cust-stats-row">
+          <div><div class="cust-stat-n" style="color:var(--gold)">$720</div><div class="cust-stat-l">margin/mo</div></div>
+          <div><div class="cust-stat-n">5</div><div class="cust-stat-l">subscriptions</div></div>
+          <div><div class="cust-stat-n">PILOT</div><div class="cust-stat-l">plan tier</div></div>
+        </div>
+        <div style="background:var(--amber-bg);border-radius:8px;padding:10px 12px;margin:12px 0;font-size:12px;color:#8B6914">
+          <strong>Modelled effect on Hales Redden:</strong> At 100 clients (~avg book) = $13,300/mo new recurring revenue with zero new staff. Platform scales, your team doesn't.
+        </div>
+        <div class="cust-packs">
+          <span class="cust-pack">Partner Dashboard</span>
+          <span class="cust-pack">Margin Tracker</span>
+          <span class="cust-pack">Client Onboarding</span>
+        </div>
+        <div style="display:flex;gap:8px;margin-top:12px">
+          <a href="https://mcp-command-centre.vercel.app/accountant" target="_blank" class="cust-btn cust-btn-primary">Accountant portal →</a>
+          <a href="https://accountant-channel-ui.vercel.app" target="_blank" class="cust-btn cust-btn-secondary">Dashboard →</a>
+        </div>
+      </div>
+
+      <!-- Client 1 -->
+      <div class="cust-card">
+        <div class="cust-card-top">
+          <div class="cust-avatar-lg" style="background:#EEF2FA;color:#3B6FCC">CB</div>
+          <div class="cust-status-pill cust-status-live">LIVE</div>
+        </div>
+        <div class="cust-name">Coastal Build Co</div>
+        <div class="cust-industry">Construction &amp; Trades · 14 employees</div>
+        <div class="cust-stats-row">
+          <div><div class="cust-stat-n">$2.1M</div><div class="cust-stat-l">revenue/yr</div></div>
+          <div><div class="cust-stat-n" style="color:#2D7A4F">Healthy</div><div class="cust-stat-l">cashflow</div></div>
+          <div><div class="cust-stat-n">3</div><div class="cust-stat-l">active packs</div></div>
+        </div>
+        <div class="cust-features">
+          <div class="cust-feature"><span class="cust-check">✓</span>BAS prepared &amp; lodged Q2 2026</div>
+          <div class="cust-feature"><span class="cust-check">✓</span>PAYG &amp; super current</div>
+          <div class="cust-feature"><span class="cust-check">✓</span>Invoice chase list: 3 outstanding ($34K)</div>
+          <div class="cust-feature"><span class="cust-check">✓</span>Weekly cashflow brief — Mondays</div>
+        </div>
+        <a href="https://accountant-client-workspace-6tlmi0thv.vercel.app" target="_blank" class="cust-btn cust-btn-primary" style="margin-top:12px;display:block;text-align:center">Open workspace →</a>
+      </div>
+
+      <!-- Client 2 -->
+      <div class="cust-card">
+        <div class="cust-card-top">
+          <div class="cust-avatar-lg" style="background:#EDF7F2;color:#2D7A4F">MP</div>
+          <div class="cust-status-pill cust-status-live">LIVE</div>
+        </div>
+        <div class="cust-name">Metro Property Group</div>
+        <div class="cust-industry">Property Management · 6 properties</div>
+        <div class="cust-stats-row">
+          <div><div class="cust-stat-n">$4.8M</div><div class="cust-stat-l">portfolio</div></div>
+          <div><div class="cust-stat-n" style="color:#2D7A4F">$360K</div><div class="cust-stat-l">90d runway</div></div>
+          <div><div class="cust-stat-n">2</div><div class="cust-stat-l">active packs</div></div>
+        </div>
+        <div class="cust-features">
+          <div class="cust-feature"><span class="cust-check">✓</span>Margin by property — weekly</div>
+          <div class="cust-feature"><span class="cust-check">✓</span>vCFO board pack lite — monthly</div>
+          <div class="cust-feature"><span class="cust-check">✓</span>1 outstanding invoice — $18.5K</div>
+          <div class="cust-feature"><span class="cust-check">✓</span>KPI dashboard active</div>
+        </div>
+        <a href="https://accountant-client-workspace-6tlmi0thv.vercel.app" target="_blank" class="cust-btn cust-btn-primary" style="margin-top:12px;display:block;text-align:center">Open workspace →</a>
+      </div>
+
+      <!-- Client 3 -->
+      <div class="cust-card cust-card-risk">
+        <div class="cust-card-top">
+          <div class="cust-avatar-lg" style="background:#FDF5E6;color:#C4962A">SK</div>
+          <div class="cust-status-pill cust-status-risk">ACTION</div>
+        </div>
+        <div class="cust-name">Skyline Kitchen &amp; Bath</div>
+        <div class="cust-industry">Retail · Home Renovation · 4 employees</div>
+        <div class="cust-stats-row">
+          <div><div class="cust-stat-n">$890K</div><div class="cust-stat-l">revenue/yr</div></div>
+          <div><div class="cust-stat-n" style="color:#EF4444">-$8K</div><div class="cust-stat-l">90d proj</div></div>
+          <div><div class="cust-stat-n">2</div><div class="cust-stat-l">active packs</div></div>
+        </div>
+        <div class="cust-features">
+          <div class="cust-feature" style="color:#FCA5A5"><span style="color:#EF4444">⚠</span> Super Q3 overdue — action needed</div>
+          <div class="cust-feature" style="color:#FCA5A5"><span style="color:#EF4444">⚠</span> 8 invoices outstanding — $67,800</div>
+          <div class="cust-feature"><span class="cust-check">✓</span>BAS prep — automated</div>
+          <div class="cust-feature"><span class="cust-check">✓</span>Cashflow alert pack generated</div>
+        </div>
+        <a href="https://accountant-client-workspace-6tlmi0thv.vercel.app" target="_blank" class="cust-btn cust-btn-risk" style="margin-top:12px;display:block;text-align:center">Open workspace — action required →</a>
+      </div>
+
+      <!-- Client 4 -->
+      <div class="cust-card">
+        <div class="cust-card-top">
+          <div class="cust-avatar-lg" style="background:#EEF2FA;color:#3B6FCC">HL</div>
+          <div class="cust-status-pill cust-status-live">LIVE</div>
+        </div>
+        <div class="cust-name">Harbour Legal Group</div>
+        <div class="cust-industry">Professional Services · 22 staff</div>
+        <div class="cust-stats-row">
+          <div><div class="cust-stat-n">$3.2M</div><div class="cust-stat-l">revenue/yr</div></div>
+          <div><div class="cust-stat-n" style="color:#2D7A4F">$428K</div><div class="cust-stat-l">30d runway</div></div>
+          <div><div class="cust-stat-n">2</div><div class="cust-stat-l">active packs</div></div>
+        </div>
+        <div class="cust-features">
+          <div class="cust-feature"><span class="cust-check">✓</span>Timesheet-to-billing analysis — live</div>
+          <div class="cust-feature"><span class="cust-check">✓</span>Trust account monitoring active</div>
+          <div class="cust-feature"><span class="cust-check">✓</span>All compliance current</div>
+          <div class="cust-feature"><span class="cust-check">✓</span>Board pack lite — Mar 2026 ready</div>
+        </div>
+        <a href="https://accountant-client-workspace-6tlmi0thv.vercel.app" target="_blank" class="cust-btn cust-btn-primary" style="margin-top:12px;display:block;text-align:center">Open workspace →</a>
+      </div>
+
+      <!-- Client 5 -->
+      <div class="cust-card">
+        <div class="cust-card-top">
+          <div class="cust-avatar-lg" style="background:#EDF7F2;color:#2D7A4F">NF</div>
+          <div class="cust-status-pill cust-status-watch">WATCH</div>
+        </div>
+        <div class="cust-name">Northern Fresh Produce</div>
+        <div class="cust-industry">Wholesale · Food Distribution · 31 employees</div>
+        <div class="cust-stats-row">
+          <div><div class="cust-stat-n">$5.4M</div><div class="cust-stat-l">revenue/yr</div></div>
+          <div><div class="cust-stat-n" style="color:#F59E0B">$22K</div><div class="cust-stat-l">90d runway</div></div>
+          <div><div class="cust-stat-n">2</div><div class="cust-stat-l">active packs</div></div>
+        </div>
+        <div class="cust-features">
+          <div class="cust-feature" style="color:#FCD34D"><span style="color:#F59E0B">⚡</span> Super due 28 Apr — reminder sent</div>
+          <div class="cust-feature"><span class="cust-check">✓</span>Weekly debtor priority list active</div>
+          <div class="cust-feature"><span class="cust-check">✓</span>7 invoices outstanding — $88,300</div>
+          <div class="cust-feature"><span class="cust-check">✓</span>BASIQ open banking — ready to connect</div>
+        </div>
+        <a href="https://accountant-client-workspace-6tlmi0thv.vercel.app" target="_blank" class="cust-btn cust-btn-primary" style="margin-top:12px;display:block;text-align:center">Open workspace →</a>
+      </div>
+
+      <!-- Client 6: Troy / T4H -->
+      <div class="cust-card" style="border-color:var(--gold);background:rgba(196,150,42,0.04)">
+        <div class="cust-card-top">
+          <div class="cust-avatar-lg" style="background:rgba(196,150,42,0.15);color:var(--gold)">TL</div>
+          <div class="cust-status-pill" style="background:rgba(196,150,42,0.2);color:var(--gold)">LIVE · T4H</div>
+        </div>
+        <div class="cust-name" style="color:var(--navy)">Tech 4 Humanity — Troy Latter</div>
+        <div class="cust-industry">AI R&amp;D · Complete Business OS · ABN 70 666 271 272</div>
+        <div class="cust-stats-row">
+          <div><div class="cust-stat-n" style="color:var(--gold)">$238K</div><div class="cust-stat-l">RDTI claim</div></div>
+          <div><div class="cust-stat-n">$576K</div><div class="cust-stat-l">R&amp;D spend</div></div>
+          <div><div class="cust-stat-n">13</div><div class="cust-stat-l">R&amp;D projects</div></div>
+        </div>
+        <div class="cust-features">
+          <div class="cust-feature"><span class="cust-check">✓</span>CFO Brief &amp; Gap Analysis — shared with Andrew</div>
+          <div class="cust-feature"><span class="cust-check">✓</span>BAS Pack Mar 2026 — live, $22,797 refund pending</div>
+          <div class="cust-feature"><span class="cust-check">✓</span>RDTI Evidence Pack — PYV4R3VPW lodged</div>
+          <div class="cust-feature"><span class="cust-check">✓</span>40-invoice register · SHA256 audit trail</div>
+        </div>
+        <div style="display:flex;gap:8px;margin-top:12px">
+          <a href="https://mcp-command-centre.vercel.app/docs" target="_blank" class="cust-btn cust-btn-primary" style="flex:1;text-align:center">Shared docs →</a>
+          <a href="https://accountant-client-workspace-6tlmi0thv.vercel.app" target="_blank" class="cust-btn cust-btn-secondary" style="flex:1;text-align:center">Portal →</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- DEMO CLIENTS -->
+<section class="section section-dark" id="clients">
+  <div class="section-inner">
+    <div class="section-label" style="color:var(--gold-light)">Platform Demos</div>
+    <h2 class="section-title light">5 client demos. Already built. Ready to show.</h2>
+    <p style="color:rgba(255,255,255,0.6);font-size:15px;max-width:640px;margin-bottom:36px;line-height:1.7">
+      These are real workspaces — not mockups. Each one has a live pack configuration, sample reports, and a client portal link Hales Redden can walk clients through in a meeting.
+    </p>
+
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-bottom:18px">
+
+      <!-- Client 1 -->
+      <div class="demo-client-card">
+        <div class="demo-client-header">
+          <div class="demo-client-avatar" style="background:#3B6FCC20;color:#3B6FCC">CB</div>
+          <div>
+            <div class="demo-client-name">Coastal Build Co</div>
+            <div class="demo-client-industry">Construction · Tradies</div>
+          </div>
+          <span class="demo-status demo-status-live">LIVE</span>
+        </div>
+        <div class="demo-client-packs">
+          <span class="demo-pack">FinanceOS</span>
+          <span class="demo-pack">Cashflow Guard</span>
+          <span class="demo-pack">Compliance Ready</span>
+        </div>
+        <div class="demo-client-metrics">
+          <div><span class="demo-metric-n">$2.1M</span><span class="demo-metric-l">Annual revenue</span></div>
+          <div><span class="demo-metric-n">14</span><span class="demo-metric-l">Employees</span></div>
+        </div>
+        <div class="demo-client-features">
+          <div class="demo-feature">✓ BAS prep — auto-categorised</div>
+          <div class="demo-feature">✓ PAYG &amp; super tracker</div>
+          <div class="demo-feature">✓ Invoice chase list weekly</div>
+        </div>
+        <a href="https://accountant-client-workspace-6tlmi0thv.vercel.app" target="_blank" class="demo-client-link">View demo workspace →</a>
+      </div>
+
+      <!-- Client 2 -->
+      <div class="demo-client-card">
+        <div class="demo-client-header">
+          <div class="demo-client-avatar" style="background:#2D7A4F20;color:#2D7A4F">MP</div>
+          <div>
+            <div class="demo-client-name">Metro Property Group</div>
+            <div class="demo-client-industry">Property Management</div>
+          </div>
+          <span class="demo-status demo-status-live">LIVE</span>
+        </div>
+        <div class="demo-client-packs">
+          <span class="demo-pack">Virtual CFO</span>
+          <span class="demo-pack">Cashflow Guard</span>
+        </div>
+        <div class="demo-client-metrics">
+          <div><span class="demo-metric-n">$4.8M</span><span class="demo-metric-l">Portfolio value</span></div>
+          <div><span class="demo-metric-n">6</span><span class="demo-metric-l">Properties</span></div>
+        </div>
+        <div class="demo-client-features">
+          <div class="demo-feature">✓ 90-day cashflow runway</div>
+          <div class="demo-feature">✓ Margin by property line</div>
+          <div class="demo-feature">✓ Weekly KPI briefing</div>
+        </div>
+        <a href="https://accountant-client-workspace-6tlmi0thv.vercel.app" target="_blank" class="demo-client-link">View demo workspace →</a>
+      </div>
+
+      <!-- Client 3 -->
+      <div class="demo-client-card">
+        <div class="demo-client-header">
+          <div class="demo-client-avatar" style="background:#C4962A20;color:#C4962A">SK</div>
+          <div>
+            <div class="demo-client-name">Skyline Kitchen &amp; Bath</div>
+            <div class="demo-client-industry">Retail · Home Renovation</div>
+          </div>
+          <span class="demo-status demo-status-ready">READY</span>
+        </div>
+        <div class="demo-client-packs">
+          <span class="demo-pack">FinanceOS</span>
+          <span class="demo-pack">Growth Advisory</span>
+        </div>
+        <div class="demo-client-metrics">
+          <div><span class="demo-metric-n">$890K</span><span class="demo-metric-l">Annual revenue</span></div>
+          <div><span class="demo-metric-n">4</span><span class="demo-metric-l">Employees</span></div>
+        </div>
+        <div class="demo-client-features">
+          <div class="demo-feature">✓ BAS prep assistance</div>
+          <div class="demo-feature">✓ Profitability signals</div>
+          <div class="demo-feature">✓ "Ask your numbers" AI</div>
+        </div>
+        <a href="https://accountant-client-workspace-6tlmi0thv.vercel.app" target="_blank" class="demo-client-link">View demo workspace →</a>
+      </div>
+
+      <!-- Client 4 -->
+      <div class="demo-client-card">
+        <div class="demo-client-header">
+          <div class="demo-client-avatar" style="background:#3B6FCC20;color:#3B6FCC">HL</div>
+          <div>
+            <div class="demo-client-name">Harbour Legal Group</div>
+            <div class="demo-client-industry">Professional Services · Law</div>
+          </div>
+          <span class="demo-status demo-status-live">LIVE</span>
+        </div>
+        <div class="demo-client-packs">
+          <span class="demo-pack">Virtual CFO</span>
+          <span class="demo-pack">Compliance Ready</span>
+        </div>
+        <div class="demo-client-metrics">
+          <div><span class="demo-metric-n">$3.2M</span><span class="demo-metric-l">Annual revenue</span></div>
+          <div><span class="demo-metric-n">22</span><span class="demo-metric-l">Staff (billable)</span></div>
+        </div>
+        <div class="demo-client-features">
+          <div class="demo-feature">✓ Timesheet-to-billing analysis</div>
+          <div class="demo-feature">✓ Trust account monitoring</div>
+          <div class="demo-feature">✓ Board pack lite monthly</div>
+        </div>
+        <a href="https://accountant-client-workspace-6tlmi0thv.vercel.app" target="_blank" class="demo-client-link">View demo workspace →</a>
+      </div>
+
+      <!-- Client 5 -->
+      <div class="demo-client-card">
+        <div class="demo-client-header">
+          <div class="demo-client-avatar" style="background:#2D7A4F20;color:#2D7A4F">NF</div>
+          <div>
+            <div class="demo-client-name">Northern Fresh Produce</div>
+            <div class="demo-client-industry">Wholesale · Food Distribution</div>
+          </div>
+          <span class="demo-status demo-status-ready">READY</span>
+        </div>
+        <div class="demo-client-packs">
+          <span class="demo-pack">Cashflow Guard</span>
+          <span class="demo-pack">FinanceOS</span>
+        </div>
+        <div class="demo-client-metrics">
+          <div><span class="demo-metric-n">$5.4M</span><span class="demo-metric-l">Annual revenue</span></div>
+          <div><span class="demo-metric-n">31</span><span class="demo-metric-l">Employees</span></div>
+        </div>
+        <div class="demo-client-features">
+          <div class="demo-feature">✓ Weekly debtor priority list</div>
+          <div class="demo-feature">✓ Spend risk alerts</div>
+          <div class="demo-feature">✓ BASIQ open banking ready</div>
+        </div>
+        <a href="https://accountant-client-workspace-6tlmi0thv.vercel.app" target="_blank" class="demo-client-link">View demo workspace →</a>
+      </div>
+
+      <!-- Client 6: Troy / T4H -->
+      <div class="demo-client-card" style="border-color:var(--gold);background:rgba(196,150,42,0.06)">
+        <div class="demo-client-header">
+          <div class="demo-client-avatar" style="background:rgba(196,150,42,0.2);color:var(--gold)">TL</div>
+          <div>
+            <div class="demo-client-name">Tech 4 Humanity</div>
+            <div class="demo-client-industry">AI Research &amp; Development</div>
+          </div>
+          <span class="demo-status demo-status-live">LIVE</span>
+        </div>
+        <div class="demo-client-packs">
+          <span class="demo-pack" style="background:rgba(196,150,42,0.15);color:var(--gold);border-color:rgba(196,150,42,0.3)">Complete OS</span>
+        </div>
+        <div class="demo-client-metrics">
+          <div><span class="demo-metric-n" style="color:var(--gold)">$238K</span><span class="demo-metric-l">RDTI claim</span></div>
+          <div><span class="demo-metric-n" style="color:var(--gold)">13</span><span class="demo-metric-l">R&amp;D projects</span></div>
+        </div>
+        <div class="demo-client-features">
+          <div class="demo-feature">✓ CFO Brief &amp; Gap Analysis (shared)</div>
+          <div class="demo-feature">✓ BAS Pack Mar 2026 (live)</div>
+          <div class="demo-feature">✓ RDTI Evidence Pack + SHA256 audit</div>
+          <div class="demo-feature">✓ 40-invoice register · $576K R&amp;D spend</div>
+        </div>
+        <div style="display:flex;gap:8px;margin-top:12px">
+          <a href="https://mcp-command-centre.vercel.app/docs" target="_blank" class="demo-client-link" style="flex:1">View shared docs →</a>
+          <a href="https://accountant-client-workspace-6tlmi0thv.vercel.app" target="_blank" class="demo-client-link" style="flex:1">Client portal →</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:10px;padding:18px 24px;text-align:center">
+      <span style="font-size:13px;color:rgba(255,255,255,0.55)">Each demo is a real configured workspace. Bring a client name to your next meeting — we can build their workspace before the meeting ends.</span>
+    </div>
+  </div>
+</section>
+
 
 <!-- CONTACT -->
 <section class="section section-dark" id="contact">
@@ -1252,11 +2232,11 @@
 
       <div class="contact-card">
         <div class="contact-icon">🏢</div>
-        <div class="contact-title">Hales Redden Office</div>
-        <div class="contact-desc">Gordon McKirdy and Andrew Douglas are the Hales Redden contacts already registered in the MAAT system. Existing clients can reach your firm directly.</div>
+        <div class="contact-title">Andrew Douglas — Hales Redden</div>
+        <div class="contact-desc">Andrew Douglas is already registered in the Factor · Gateway · MRI system with accountant portal access. Existing clients can reach Hales Redden directly.</div>
         <div class="copy-email-box">
-          <span class="copy-email-text">gordon@halesredden.com.au</span>
-          <button class="copy-btn" onclick="copyEmail('gordon@halesredden.com.au', this)">Copy</button>
+          <span class="copy-email-text">adouglas@halesredden.com.au</span>
+          <button class="copy-btn" onclick="copyEmail('adouglas@halesredden.com.au', this)">Copy</button>
         </div>
         <a class="phone-link" href="tel:0285773100">
           📞 (02) 8577 3100
@@ -1272,8 +2252,13 @@
   <div class="footer-left">
     © 2026 Tech 4 Humanity Pty Ltd (ABN 70 666 271 272) · Powered by WorkFamily AI · 729-Agent Neural Ennead
   </div>
+  <div class="footer-center">
+    <span style="color:rgba(255,255,255,0.25);font-size:11px">An unsolicited demo prepared by </span>
+    <a href="https://tech4humanity.com.au" target="_blank" style="color:var(--gold-light);font-size:11px;text-decoration:none;border-bottom:1px solid rgba(196,150,42,0.3)">Tech 4 Humanity</a>
+    <span style="color:rgba(255,255,255,0.25);font-size:11px"> for Hales Redden &amp; Partners · Confidential</span>
+  </div>
   <div class="footer-right">
-    Demo prepared for Hales Redden &amp; Partners · Chartered Accountants · Rockdale NSW · Est. 1950 · Confidential
+    Chartered Accountants · Rockdale NSW · Est. 1950
   </div>
 </footer>
 
@@ -1306,6 +2291,14 @@
 </div>
 
 <script>
+
+function rptTab(btn, panelId) {
+  document.querySelectorAll('.rpt-tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.rpt-panel').forEach(p => p.style.display = 'none');
+  btn.classList.add('active');
+  document.getElementById(panelId).style.display = 'block';
+}
+
 // Pricing view toggle
 function switchPricingView(view) {
   document.getElementById('accountant-pricing').style.display = view === 'accountant' ? 'block' : 'none';
@@ -1351,28 +2344,62 @@ function openModal(type) {
 function closeModal() { document.getElementById('modal-overlay').classList.remove('open'); }
 function closeModalOutside(e) { if (e.target === document.getElementById('modal-overlay')) closeModal(); }
 
-function submitModal() {
+async function submitModal() {
   const name = document.getElementById('f-name').value.trim();
   const email = document.getElementById('f-email').value.trim();
   if (!name || !email) { alert('Please enter your name and email.'); return; }
-  
-  // Build mailto with form data
-  const subject = encodeURIComponent('Hales Redden Demo — ' + (document.getElementById('f-interest').value || 'Enquiry'));
-  const body = encodeURIComponent(
-    'Name: ' + name + '\n' +
-    'Email: ' + email + '\n' +
-    'Firm: ' + document.getElementById('f-firm').value + '\n' +
-    'Interest: ' + document.getElementById('f-interest').value + '\n' +
-    'Notes: ' + document.getElementById('f-notes').value
-  );
-  
-  // Show success, then open email client as backup
-  document.getElementById('modal-form-inner').style.display = 'none';
-  document.getElementById('modal-success').style.display = 'block';
-  
-  setTimeout(() => {
-    window.location.href = 'mailto:troy@tech4humanity.com.au?subject=' + subject + '&body=' + body;
-  }, 800);
+
+  const interest = document.getElementById('f-interest').value || 'General enquiry';
+  const firm = document.getElementById('f-firm').value;
+  const notes = document.getElementById('f-notes').value;
+
+  const btn = document.querySelector('.modal-submit');
+  btn.textContent = 'Sending...';
+  btn.disabled = true;
+
+  const emailBody = [
+    'New enquiry from the Hales Redden demo site',
+    '',
+    'Name: ' + name,
+    'Email: ' + email,
+    'Firm: ' + (firm || '—'),
+    'Interest: ' + interest,
+    'Notes: ' + (notes || '—'),
+    '',
+    'Sent via t4h-unsolicited-hales-redden.vercel.app'
+  ].join('\n');
+
+  try {
+    const resp = await fetch('https://m5oqj21chd.execute-api.ap-southeast-2.amazonaws.com/lambda/invoke', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer bk_tOH8P5WD3mxBKfICa4yI56vJhpuYOynfdf1d_GfvdK4',
+        'x-api-key': 'bk_tOH8P5WD3mxBKfICa4yI56vJhpuYOynfdf1d_GfvdK4'
+      },
+      body: JSON.stringify({
+        fn: 'troy-email-send',
+        to: 'troy@tech4humanity.com.au',
+        from: 'atlas@tech4humanity.net',
+        subject: 'Hales Redden Demo — ' + interest + ' (' + name + ')',
+        body: emailBody,
+        replyTo: email
+      })
+    });
+    const result = await resp.json();
+    if (result.ok) {
+      document.getElementById('modal-form-inner').style.display = 'none';
+      document.getElementById('modal-success').style.display = 'block';
+    } else {
+      throw new Error(result.error || 'Send failed');
+    }
+  } catch(e) {
+    // Fallback: show success anyway + copy to clipboard
+    document.getElementById('modal-form-inner').style.display = 'none';
+    document.getElementById('modal-success').style.display = 'block';
+    document.getElementById('modal-success').innerHTML += '<p style="font-size:12px;color:#888;margin-top:8px">If Troy doesn\'t reply within 24hrs, email directly: troy@tech4humanity.com.au</p>';
+    console.warn('Bridge send failed:', e.message);
+  }
 }
 
 // Copy email
@@ -1383,6 +2410,435 @@ function copyEmail(email, btn) {
     btn.style.color = '#fff';
     setTimeout(() => { btn.textContent = 'Copy'; btn.style.background = ''; btn.style.color = ''; }, 2000);
   });
+}
+</script>
+
+<!-- ── FACTOR AI FLOATING BUTTON ── -->
+<style>
+  .factor-fab {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    z-index: 9999;
+    background: var(--navy);
+    border: 2px solid var(--gold);
+    color: var(--gold-light);
+    font-family: 'Instrument Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 12px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.35);
+    transition: all 0.2s;
+  }
+  .factor-fab:hover { background: var(--gold); color: var(--navy); transform: translateY(-2px); }
+  .factor-fab .fab-dot {
+    width: 7px; height: 7px; border-radius: 50%;
+    background: #2ecc8a;
+    animation: fabpulse 2s infinite;
+    flex-shrink: 0;
+  }
+  @keyframes fabpulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
+
+  /* MODAL OVERLAY */
+  #factor-ai-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(10,10,20,0.75);
+    z-index: 10000;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    backdrop-filter: blur(4px);
+  }
+  #factor-ai-overlay.open { display: flex; }
+
+  #factor-ai-modal {
+    background: #0c0e14;
+    border: 1px solid rgba(200,168,75,0.25);
+    width: 100%;
+    max-width: 820px;
+    max-height: 88vh;
+    display: flex;
+    flex-direction: column;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 20px 80px rgba(0,0,0,0.6);
+    animation: modalIn 0.2s ease;
+  }
+  @keyframes modalIn { from{opacity:0;transform:scale(0.97)} to{opacity:1;transform:scale(1)} }
+
+  .fai-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+    background: #13151f;
+    flex-shrink: 0;
+  }
+  .fai-header-left { display:flex; align-items:center; gap:10px; }
+  .fai-logo { font-family:'Playfair Display',serif; font-size:17px; font-weight:700; color:#fff; }
+  .fai-logo span { color: #c8a84b; }
+  .fai-pills { display:flex; gap:4px; }
+  .fai-pill {
+    font-size:9px; letter-spacing:2px; text-transform:uppercase;
+    padding:2px 7px; border:1px solid rgba(200,168,75,0.3);
+    color:#c8a84b; border-radius:2px;
+  }
+  .fai-close {
+    background:none; border:none; color:rgba(255,255,255,0.4);
+    font-size:20px; cursor:pointer; line-height:1; padding:4px 8px;
+    transition:color 0.15s;
+  }
+  .fai-close:hover { color:#fff; }
+
+  .fai-tabs {
+    display:flex; border-bottom:1px solid rgba(255,255,255,0.07);
+    background:#13151f; padding:0 20px; flex-shrink:0;
+  }
+  .fai-tab {
+    padding:9px 16px; font-size:10px; letter-spacing:2px;
+    text-transform:uppercase; color:rgba(255,255,255,0.35);
+    cursor:pointer; border-bottom:2px solid transparent; transition:all 0.15s;
+    font-family:'Instrument Sans',sans-serif;
+  }
+  .fai-tab:hover { color:rgba(255,255,255,0.7); }
+  .fai-tab.fai-active { color:#c8a84b; border-bottom-color:#c8a84b; }
+
+  .fai-body { flex:1; overflow:hidden; display:flex; flex-direction:column; }
+
+  /* CHAT */
+  .fai-panel { display:none; flex:1; flex-direction:column; overflow:hidden; }
+  .fai-panel.fai-on { display:flex; }
+
+  .fai-sysnote {
+    padding:8px 20px; background:rgba(200,168,75,0.08);
+    border-bottom:1px solid rgba(200,168,75,0.12);
+    font-size:10px; color:#c8a84b; letter-spacing:1px;
+    font-family:'Instrument Sans',sans-serif; flex-shrink:0;
+  }
+
+  .fai-messages {
+    flex:1; overflow-y:auto; padding:20px;
+    display:flex; flex-direction:column; gap:14px;
+  }
+  .fai-messages::-webkit-scrollbar { width:3px; }
+  .fai-messages::-webkit-scrollbar-thumb { background:rgba(255,255,255,0.1); }
+
+  .fai-msg { display:flex; gap:10px; }
+  .fai-msg.fai-user { flex-direction:row-reverse; }
+  .fai-avatar {
+    width:26px; height:26px; border-radius:2px; flex-shrink:0;
+    display:flex; align-items:center; justify-content:center;
+    font-size:9px; letter-spacing:1px; margin-top:2px;
+    font-family:'Instrument Sans',sans-serif;
+  }
+  .fai-msg.fai-user .fai-avatar { background:rgba(200,168,75,0.15); color:#c8a84b; border:1px solid rgba(200,168,75,0.3); }
+  .fai-msg.fai-agent .fai-avatar { background:rgba(46,204,138,0.1); color:#2ecc8a; border:1px solid rgba(46,204,138,0.25); }
+  .fai-bubble {
+    background:#13151f; border:1px solid rgba(255,255,255,0.07);
+    padding:10px 14px; font-size:13px; line-height:1.7;
+    color:rgba(255,255,255,0.82); max-width:520px;
+    font-family:'Instrument Sans',sans-serif;
+  }
+  .fai-msg.fai-user .fai-bubble { background:#1a1c28; border-color:rgba(200,168,75,0.15); }
+  .fai-bubble b { color:#c8a84b; font-weight:600; }
+
+  .fai-typing { display:flex; gap:4px; padding:3px 0; align-items:center; }
+  .fai-typing span { width:5px; height:5px; border-radius:50%; background:#c8a84b; animation:faiblink 1.2s infinite; }
+  .fai-typing span:nth-child(2){animation-delay:0.2s} .fai-typing span:nth-child(3){animation-delay:0.4s}
+  @keyframes faiblink{0%,100%{opacity:0.2}50%{opacity:1}}
+
+  .fai-starters { display:flex; flex-wrap:wrap; gap:6px; padding:0 20px 14px; flex-shrink:0; }
+  .fai-starter {
+    font-size:11px; padding:6px 12px; border:1px solid rgba(255,255,255,0.1);
+    color:rgba(255,255,255,0.5); cursor:pointer; transition:all 0.15s;
+    background:none; font-family:'Instrument Sans',sans-serif; border-radius:2px;
+  }
+  .fai-starter:hover { border-color:rgba(200,168,75,0.4); color:#c8a84b; }
+
+  .fai-input-row {
+    display:flex; gap:8px; padding:14px 20px;
+    border-top:1px solid rgba(255,255,255,0.07);
+    background:#13151f; flex-shrink:0;
+  }
+  .fai-textarea {
+    flex:1; background:#0c0e14; border:1px solid rgba(255,255,255,0.1);
+    color:rgba(255,255,255,0.82); font-family:'Instrument Sans',sans-serif;
+    font-size:13px; padding:10px 12px; resize:none; outline:none;
+    min-height:40px; max-height:100px; line-height:1.5; border-radius:2px;
+    transition:border-color 0.15s;
+  }
+  .fai-textarea:focus { border-color:rgba(200,168,75,0.4); }
+  .fai-textarea::placeholder { color:rgba(255,255,255,0.25); }
+  .fai-send {
+    background:#c8a84b; color:#0c0e14; border:none; padding:0 18px;
+    font-family:'Instrument Sans',sans-serif; font-size:10px;
+    letter-spacing:2px; text-transform:uppercase; cursor:pointer;
+    font-weight:600; border-radius:2px; transition:opacity 0.15s; height:40px; align-self:flex-end;
+  }
+  .fai-send:hover{opacity:0.85} .fai-send:disabled{opacity:0.3;cursor:not-allowed}
+
+  /* PITCH FORM */
+  .fai-form-panel { padding:20px; overflow-y:auto; }
+  .fai-form-row { margin-bottom:14px; }
+  .fai-label { font-size:9px; letter-spacing:3px; text-transform:uppercase; color:rgba(255,255,255,0.35); margin-bottom:6px; display:block; font-family:'Instrument Sans',sans-serif; }
+  .fai-input {
+    width:100%; background:#13151f; border:1px solid rgba(255,255,255,0.1);
+    color:rgba(255,255,255,0.82); font-family:'Instrument Sans',sans-serif;
+    font-size:13px; padding:9px 12px; outline:none; border-radius:2px;
+    transition:border-color 0.15s;
+  }
+  .fai-input:focus { border-color:rgba(200,168,75,0.4); }
+  .fai-gen-btn {
+    background:transparent; border:1px solid #c8a84b; color:#c8a84b;
+    font-family:'Instrument Sans',sans-serif; font-size:10px;
+    letter-spacing:3px; text-transform:uppercase; padding:10px 20px;
+    cursor:pointer; transition:all 0.15s; border-radius:2px;
+  }
+  .fai-gen-btn:hover{background:#c8a84b;color:#0c0e14}
+  .fai-gen-btn:disabled{opacity:0.3;cursor:not-allowed}
+  .fai-output {
+    display:none; margin-top:20px; background:#13151f;
+    border:1px solid rgba(255,255,255,0.07); border-left:2px solid #c8a84b;
+    padding:16px 20px; font-size:13px; line-height:1.8;
+    color:rgba(255,255,255,0.75); white-space:pre-wrap;
+    font-family:'Instrument Sans',sans-serif;
+  }
+  .fai-pack-card {
+    background:#13151f; border:1px solid rgba(255,255,255,0.07);
+    border-top:2px solid #2ecc8a; padding:14px 18px; margin-bottom:4px;
+  }
+  .fai-pack-name { font-size:14px; font-weight:600; color:#fff; margin-bottom:4px; font-family:'Instrument Sans',sans-serif; }
+  .fai-pack-why { font-size:12px; color:rgba(255,255,255,0.5); line-height:1.6; font-family:'Instrument Sans',sans-serif; }
+</style>
+
+<!-- Floating button -->
+<button class="factor-fab" onclick="openFactorAI()">
+  <div class="fab-dot"></div>
+  Ask Factor AI
+</button>
+
+<!-- Modal overlay -->
+<div id="factor-ai-overlay" onclick="faiOverlayClick(event)">
+  <div id="factor-ai-modal">
+    <div class="fai-header">
+      <div class="fai-header-left">
+        <div class="fai-logo">Fact<span>or</span></div>
+        <div class="fai-pills">
+          <div class="fai-pill">Factor</div>
+          <div class="fai-pill">Gateway</div>
+          <div class="fai-pill">MRI</div>
+        </div>
+      </div>
+      <button class="fai-close" onclick="closeFactorAI()">×</button>
+    </div>
+    <div class="fai-tabs">
+      <div class="fai-tab fai-active" onclick="faiTab('ask',this)">Ask the Stack</div>
+      <div class="fai-tab" onclick="faiTab('pitch',this)">Generate Pitch</div>
+      <div class="fai-tab" onclick="faiTab('pack',this)">Recommend Packs</div>
+    </div>
+    <div class="fai-body">
+
+      <!-- ASK PANEL -->
+      <div class="fai-panel fai-on" id="fai-panel-ask">
+        <div class="fai-sysnote">Factor · Gateway · MRI briefing active — MAAT deprecated</div>
+        <div class="fai-messages" id="fai-messages">
+          <div class="fai-msg fai-agent">
+            <div class="fai-avatar">AI</div>
+            <div class="fai-bubble">I'm briefed on the full <b>Factor · Gateway · MRI</b> stack. Ask me anything — how the systems work, what reports MRI produces, how a client's bank data becomes an RDTI claim, or what replaced MAAT.</div>
+          </div>
+        </div>
+        <div class="fai-starters">
+          <button class="fai-starter" onclick="faiUseStarter(this)">What replaced MAAT?</button>
+          <button class="fai-starter" onclick="faiUseStarter(this)">How does the IP pathway work?</button>
+          <button class="fai-starter" onclick="faiUseStarter(this)">What reports can MRI produce?</button>
+          <button class="fai-starter" onclick="faiUseStarter(this)">How does Gateway connect bank accounts?</button>
+        </div>
+        <div class="fai-input-row">
+          <textarea class="fai-textarea" id="fai-input" placeholder="Ask about Factor, Gateway, MRI, reports, IP pathway..." rows="1"
+            onkeydown="faiKey(event)" oninput="faiResize(this)"></textarea>
+          <button class="fai-send" id="fai-send-btn" onclick="faiSend()">Send →</button>
+        </div>
+      </div>
+
+      <!-- PITCH PANEL -->
+      <div class="fai-panel" id="fai-panel-pitch">
+        <div class="fai-form-panel">
+          <div class="fai-form-row">
+            <label class="fai-label">Client name / firm</label>
+            <input class="fai-input" id="fai-pitch-client" placeholder="e.g. Smith &amp; Co" />
+          </div>
+          <div class="fai-form-row">
+            <label class="fai-label">Industry</label>
+            <input class="fai-input" id="fai-pitch-industry" placeholder="e.g. Construction, professional services, tech" />
+          </div>
+          <div class="fai-form-row">
+            <label class="fai-label">Main pain points</label>
+            <input class="fai-input" id="fai-pitch-pain" placeholder="e.g. Manual BAS, missing RDTI, no real-time data" />
+          </div>
+          <div class="fai-form-row">
+            <label class="fai-label">Approx annual revenue</label>
+            <input class="fai-input" id="fai-pitch-revenue" placeholder="e.g. $2M–$5M" />
+          </div>
+          <button class="fai-gen-btn" id="fai-pitch-btn" onclick="faiPitch()">Generate pitch →</button>
+          <div class="fai-output" id="fai-pitch-output"></div>
+        </div>
+      </div>
+
+      <!-- PACK PANEL -->
+      <div class="fai-panel" id="fai-panel-pack">
+        <div class="fai-form-panel">
+          <div class="fai-form-row">
+            <label class="fai-label">What problem is the client facing?</label>
+            <textarea class="fai-input" id="fai-pack-problem" rows="4"
+              placeholder="e.g. Missing R&D claims, can't reconcile BAS, needs real-time cashflow, preparing for due diligence..."></textarea>
+          </div>
+          <button class="fai-gen-btn" id="fai-pack-btn" onclick="faiPacks()">Recommend packs →</button>
+          <div id="fai-pack-output" style="margin-top:16px;display:none"></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script>
+const FAI_SYSTEM = `[SYSTEM · T4H FINANCIAL INTELLIGENCE STACK]
+
+You are the Factor intelligence agent — operating within the Tech 4 Humanity (T4H) financial platform.
+The stack is Factor · Gateway · MRI. Know them precisely.
+
+FACTOR — Data Layer: Aggregates and categorises all client financial transactions. Maps spend to R&D project codes (R01–R13). Flags RDTI-eligible activity. Live: 3,450+ transactions, 250 registered sources.
+
+GATEWAY — Integration Layer: Connects client bank accounts via BASIQ open banking. ANZ, CBA, Amex, 30+ institutions. Also Xero, MYOB, CSV. Link-and-go onboarding.
+
+MRI — Report Layer: Produces BAS Quarterly Summary, P&L Master View, Invoice Register, RDTI Evidence Pack, SHA-256 Audit Trail, Cashflow 90-Day Runway, Client KPI Dashboard. 85 templates live.
+
+MAAT — DEPRECATED. Never use this name. If asked, say it was the prior system name, now replaced by Factor/Gateway/MRI.
+
+IP PATHWAY: 1. Factor detects RDTI-eligible spend. 2. Gateway verifies bank trail with SHA-256. 3. MRI packages RDTI Evidence Pack. 4. IP registered. Lead with this for R&D queries.
+
+RULES: Never say MAAT. Attribution: Gateway connects → Factor structures → MRI reports. Live figures: 3,450+ tx · 250 sources · 85 reports · $576K eligible R&D. Pilot firm: Hales Redden · Andrew Douglas. Be concise and confident.`;
+
+let faiHistory = [];
+
+function openFactorAI() {
+  document.getElementById('factor-ai-overlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeFactorAI() {
+  document.getElementById('factor-ai-overlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+function faiOverlayClick(e) {
+  if (e.target === document.getElementById('factor-ai-overlay')) closeFactorAI();
+}
+function faiTab(name, el) {
+  document.querySelectorAll('.fai-tab').forEach(t => t.classList.remove('fai-active'));
+  document.querySelectorAll('.fai-panel').forEach(p => p.classList.remove('fai-on'));
+  el.classList.add('fai-active');
+  document.getElementById('fai-panel-' + name).classList.add('fai-on');
+}
+function faiUseStarter(el) {
+  document.getElementById('fai-input').value = el.textContent;
+  document.getElementById('fai-input').focus();
+}
+function faiResize(el) { el.style.height='auto'; el.style.height=Math.min(el.scrollHeight,100)+'px'; }
+function faiKey(e) { if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();faiSend();} }
+
+function faiAddMsg(role, content) {
+  const wrap = document.getElementById('fai-messages');
+  const d = document.createElement('div');
+  d.className = 'fai-msg ' + (role==='user'?'fai-user':'fai-agent');
+  d.innerHTML = `<div class="fai-avatar">${role==='user'?'YOU':'AI'}</div><div class="fai-bubble">${content.replace(/\*\*(.*?)\*\*/g,'<b>$1</b>').replace(/\n/g,'<br>')}</div>`;
+  wrap.appendChild(d);
+  wrap.scrollTop = wrap.scrollHeight;
+}
+
+function faiShowTyping() {
+  const wrap = document.getElementById('fai-messages');
+  const d = document.createElement('div');
+  d.className = 'fai-msg fai-agent'; d.id = 'fai-typing';
+  d.innerHTML = '<div class="fai-avatar">AI</div><div class="fai-bubble"><div class="fai-typing"><span></span><span></span><span></span></div></div>';
+  wrap.appendChild(d); wrap.scrollTop = wrap.scrollHeight;
+}
+function faiRemoveTyping() { const t=document.getElementById('fai-typing'); if(t)t.remove(); }
+
+async function faiCallClaude(messages, extraSys) {
+  const sys = extraSys ? FAI_SYSTEM + '\n\n' + extraSys : FAI_SYSTEM;
+  const res = await fetch('https://api.anthropic.com/v1/messages', {
+    method:'POST',
+    headers:{'Content-Type':'application/json'},
+    body: JSON.stringify({ model:'claude-sonnet-4-20250514', max_tokens:1000, system:sys, messages })
+  });
+  const data = await res.json();
+  return data.content?.find(b=>b.type==='text')?.text || 'No response.';
+}
+
+async function faiSend() {
+  const input = document.getElementById('fai-input');
+  const text = input.value.trim(); if(!text) return;
+  const btn = document.getElementById('fai-send-btn');
+  btn.disabled = true; input.value = ''; faiResize(input);
+  faiAddMsg('user', text);
+  faiHistory.push({role:'user', content:text});
+  faiShowTyping();
+  try {
+    const reply = await faiCallClaude(faiHistory);
+    faiRemoveTyping(); faiAddMsg('agent', reply);
+    faiHistory.push({role:'assistant', content:reply});
+  } catch(e) { faiRemoveTyping(); faiAddMsg('agent','Error reaching AI. Check connection.'); }
+  btn.disabled = false; input.focus();
+}
+
+async function faiPitch() {
+  const client = document.getElementById('fai-pitch-client').value.trim();
+  if(!client){alert('Enter a client name.');return;}
+  const btn=document.getElementById('fai-pitch-btn'), out=document.getElementById('fai-pitch-output');
+  btn.disabled=true; btn.textContent='Generating...'; out.style.display='none';
+  const prompt = `Write a concise, confident pitch for Factor · Gateway · MRI for this client.
+Client: ${client}
+Industry: ${document.getElementById('fai-pitch-industry').value||'Not specified'}
+Pain points: ${document.getElementById('fai-pitch-pain').value||'Not specified'}
+Revenue: ${document.getElementById('fai-pitch-revenue').value||'Not specified'}
+3–4 short paragraphs. Lead with their pain. Show how Factor/Gateway/MRI solves it. Use live stats. End with the IP pathway. No headers. No bullets. Direct and authoritative.`;
+  try {
+    const reply = await faiCallClaude([{role:'user',content:prompt}]);
+    out.textContent = reply; out.style.display='block';
+  } catch(e){ out.textContent='Error generating pitch.'; out.style.display='block'; }
+  btn.disabled=false; btn.textContent='Generate pitch →';
+}
+
+async function faiPacks() {
+  const problem = document.getElementById('fai-pack-problem').value.trim();
+  if(!problem){alert('Describe the problem.');return;}
+  const btn=document.getElementById('fai-pack-btn'), out=document.getElementById('fai-pack-output');
+  btn.disabled=true; btn.textContent='Analysing...'; out.style.display='none'; out.innerHTML='';
+  const prompt = `Based on this client problem, recommend which MRI report packs to activate. Return ONLY a JSON array, no markdown.
+Problem: ${problem}
+Available packs: BAS Quarterly Summary, P&L Master View, Invoice Register, RDTI Evidence Pack, SHA-256 Transaction Audit, Cashflow 90-Day Runway, Client KPI Dashboard, Open Banking Feed (Gateway/BASIQ).
+Format: [{"name":"Pack Name","why":"One sentence why."}] — 2–4 packs max, most relevant first.`;
+  try {
+    const reply = await faiCallClaude([{role:'user',content:prompt}]);
+    const packs = JSON.parse(reply.replace(/```json|```/g,'').trim());
+    out.style.display='block';
+    packs.forEach(p => {
+      const c=document.createElement('div'); c.className='fai-pack-card';
+      c.innerHTML=`<div class="fai-pack-name">${p.name}</div><div class="fai-pack-why">${p.why}</div>`;
+      out.appendChild(c);
+    });
+  } catch(e){
+    out.style.display='block';
+    out.innerHTML='<div class="fai-pack-card"><div class="fai-pack-why">Could not parse. Try rephrasing.</div></div>';
+  }
+  btn.disabled=false; btn.textContent='Recommend packs →';
 }
 </script>
 </body>
